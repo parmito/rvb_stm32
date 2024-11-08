@@ -1,0 +1,5 @@
+../Core/Src/TaskIO.c:40:6:TaskIO_Entry	1
+../Core/Src/TaskIO.c:57:15:TaskIO_Start	1
+../Core/Src/TaskIO.c:87:15:TaskIO_IgnoreEvent	1
+../Core/Src/TaskIO.c:101:6:vLocalTimerCallbackIo	5
+../Core/Src/TaskIO.c:184:6:vTaskIO	2

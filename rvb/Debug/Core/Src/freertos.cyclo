@@ -1,0 +1,8 @@
+../Core/Src/freertos.c:84:6:vApplicationGetIdleTaskMemory	1
+../Core/Src/freertos.c:97:6:vApplicationGetTimerTaskMemory	1
+../Core/Src/freertos.c:111:6:MX_FREERTOS_Init	1
+../Core/Src/freertos.c:185:6:TaskIO_Init	1
+../Core/Src/freertos.c:205:6:TaskIsoTp_Init	1
+../Core/Src/freertos.c:223:6:TaskAppCAN_Init	1
+../Core/Src/freertos.c:243:6:TaskAppSerial_Init	1
+../Core/Src/freertos.c:255:6:vTimerCallbackIo	1

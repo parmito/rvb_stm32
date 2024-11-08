@@ -1,0 +1,7 @@
+../Core/Src/TaskAppCAN.c:45:6:TaskAppCAN_Entry	1
+../Core/Src/TaskAppCAN.c:64:15:TaskAppCAN_Start	1
+../Core/Src/TaskAppCAN.c:82:15:TaskAppCAN_ReceiveEvent	1
+../Core/Src/TaskAppCAN.c:98:15:TaskAppCAN_TransmitEvent	1
+../Core/Src/TaskAppCAN.c:111:15:TaskAppCAN_IgnoreEvent	1
+../Core/Src/TaskAppCAN.c:125:6:vTimerCallbackAppCAN	5
+../Core/Src/TaskAppCAN.c:194:6:vTaskAppCAN	6

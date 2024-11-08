@@ -1,0 +1,31 @@
+16:58:49 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+arm-none-eabi-gcc "../Core/Src/TaskIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskIO.d" -MT"Core/Src/TaskIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskIO.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/state.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/state.d" -MT"Core/Src/state.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:67:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   67 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:67:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   67 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_ReceiveEvent':
+../Core/Src/TaskAppCAN.c:86:18: warning: unused variable 'pstFrameCAN' [-Wunused-variable]
+   86 |     tstFrameCAN *pstFrameCAN = (tstFrameCAN*)(psMessage->pcMessageData);
+      |                  ^~~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22828	     96	   7936	  30860	   788c	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+
+16:58:50 Build Finished. 0 errors, 3 warnings. (took 367ms)
+

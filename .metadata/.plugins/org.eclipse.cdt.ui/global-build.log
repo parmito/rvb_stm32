@@ -1,0 +1,1598 @@
+10:17:26 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+10:17:41 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+10:29:52 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+10:29:56 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+10:32:36 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22716	     96	   7808	  30620	   779c	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+10:32:55 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22716	     96	   7808	  30620	   779c	rvb.elf
+Finished building: default.size.stdout
+ 
+11:33:39 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/can.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/can.d" -MT"Core/Src/can.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/can.o"
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22804	     96	   7808	  30708	   77f4	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+11:59:46 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22804	     96	   7808	  30708	   77f4	rvb.elf
+Finished building: default.size.stdout
+ 
+11:59:50 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22804	     96	   7808	  30708	   77f4	rvb.elf
+Finished building: default.size.stdout
+ 
+12:13:22 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+arm-none-eabi-gcc "../Core/Src/can.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/can.d" -MT"Core/Src/can.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/can.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+12:14:29 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+12:32:54 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/can.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/can.d" -MT"Core/Src/can.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/can.o"
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+12:33:11 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+12:34:47 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/can.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/can.d" -MT"Core/Src/can.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/can.o"
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+12:34:58 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+12:40:36 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/can.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/can.d" -MT"Core/Src/can.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/can.o"
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+12:40:45 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+12:41:25 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/can.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/can.d" -MT"Core/Src/can.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/can.o"
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+12:41:31 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+12:41:33 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+12:42:17 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/can.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/can.d" -MT"Core/Src/can.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/can.o"
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+12:42:20 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+13:22:42 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/can.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/can.d" -MT"Core/Src/can.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/can.o"
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+13:22:47 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+13:23:37 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/can.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/can.d" -MT"Core/Src/can.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/can.o"
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+13:23:41 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+13:24:43 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:204:37: error: invalid type argument of '->' (have 'CAN_RxHeaderTypeDef')
+  204 |                         if(pRxHeader->StdId == 0x03C0)
+      |                                     ^~
+make: *** [Core/Src/subdir.mk:58: Core/Src/TaskAppCAN.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+13:25:11 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+13:25:19 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+16:49:07 **** Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+16:49:12 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+07:47:11 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+07:47:14 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22652	     96	   7808	  30556	   775c	rvb.elf
+Finished building: default.size.stdout
+ 
+07:49:32 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22700	     96	   7808	  30604	   778c	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+07:49:36 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22700	     96	   7808	  30604	   778c	rvb.elf
+Finished building: default.size.stdout
+ 
+07:53:29 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22700	     96	   7808	  30604	   778c	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+07:53:39 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22700	     96	   7808	  30604	   778c	rvb.elf
+Finished building: default.size.stdout
+ 
+07:53:56 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22700	     96	   7808	  30604	   778c	rvb.elf
+Finished building: default.size.stdout
+ 
+07:54:31 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22700	     96	   7808	  30604	   778c	rvb.elf
+Finished building: default.size.stdout
+ 
+07:54:34 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22700	     96	   7808	  30604	   778c	rvb.elf
+Finished building: default.size.stdout
+ 
+07:56:05 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22700	     96	   7808	  30604	   778c	rvb.elf
+Finished building: default.size.stdout
+ 
+07:56:37 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22700	     96	   7808	  30604	   778c	rvb.elf
+Finished building: default.size.stdout
+ 
+07:56:39 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22700	     96	   7808	  30604	   778c	rvb.elf
+Finished building: default.size.stdout
+ 
+07:57:05 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22700	     96	   7808	  30604	   778c	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+07:57:07 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22700	     96	   7808	  30604	   778c	rvb.elf
+Finished building: default.size.stdout
+ 
+08:53:34 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:191:17: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  191 |                 memset(u8Data,0,sizeof(u8Data));
+      |                 ^~~~~~
+../Core/Src/TaskAppCAN.c:8:1: note: include '<string.h>' or provide a declaration of 'memset'
+    7 | #include "TaskAppCAN.h"
+  +++ |+#include <string.h>
+    8 | extern void vTimerCallbackAppCAN(void const * argument);
+../Core/Src/TaskAppCAN.c:191:17: warning: incompatible implicit declaration of built-in function 'memset' [-Wbuiltin-declaration-mismatch]
+  191 |                 memset(u8Data,0,sizeof(u8Data));
+      |                 ^~~~~~
+../Core/Src/TaskAppCAN.c:191:17: note: include '<string.h>' or provide a declaration of 'memset'
+../Core/Src/TaskAppCAN.c:199:59: warning: assignment to 'char *' from 'uint32_t' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+  199 |                                 stAppCANMsg.pcMessageData = pRxHeader.StdId;
+      |                                                           ^
+../Core/Src/TaskAppCAN.c:201:59: warning: assignment to 'char *' from 'uint32_t' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+  201 |                                 stAppCANMsg.pcMessageData = pRxHeader.DLC;
+      |                                                           ^
+../Core/Src/TaskAppCAN.c:202:33: warning: implicit declaration of function 'memcpy' [-Wimplicit-function-declaration]
+  202 |                                 memcpy(stAppCANMsg.pcMessageData,u8Data,pRxHeader.DLC);
+      |                                 ^~~~~~
+../Core/Src/TaskAppCAN.c:202:33: note: include '<string.h>' or provide a declaration of 'memcpy'
+../Core/Src/TaskAppCAN.c:202:33: warning: incompatible implicit declaration of built-in function 'memcpy' [-Wbuiltin-declaration-mismatch]
+../Core/Src/TaskAppCAN.c:202:33: note: include '<string.h>' or provide a declaration of 'memcpy'
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22748	     96	   7808	  30652	   77bc	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+08:53:52 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:191:17: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  191 |                 memset(u8Data,0,sizeof(u8Data));
+      |                 ^~~~~~
+../Core/Src/TaskAppCAN.c:8:1: note: include '<string.h>' or provide a declaration of 'memset'
+    7 | #include "TaskAppCAN.h"
+  +++ |+#include <string.h>
+    8 | extern void vTimerCallbackAppCAN(void const * argument);
+../Core/Src/TaskAppCAN.c:191:17: warning: incompatible implicit declaration of built-in function 'memset' [-Wbuiltin-declaration-mismatch]
+  191 |                 memset(u8Data,0,sizeof(u8Data));
+      |                 ^~~~~~
+../Core/Src/TaskAppCAN.c:191:17: note: include '<string.h>' or provide a declaration of 'memset'
+../Core/Src/TaskAppCAN.c:199:61: error: invalid type argument of unary '*' (have 'uint32_t' {aka 'long unsigned int'})
+  199 |                                 stAppCANMsg.pcMessageData = *pRxHeader.StdId;
+      |                                                             ^~~~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:201:61: error: invalid type argument of unary '*' (have 'uint32_t' {aka 'long unsigned int'})
+  201 |                                 stAppCANMsg.pcMessageData = *pRxHeader.DLC;
+      |                                                             ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:202:33: warning: implicit declaration of function 'memcpy' [-Wimplicit-function-declaration]
+  202 |                                 memcpy(stAppCANMsg.pcMessageData,u8Data,pRxHeader.DLC);
+      |                                 ^~~~~~
+../Core/Src/TaskAppCAN.c:202:33: note: include '<string.h>' or provide a declaration of 'memcpy'
+../Core/Src/TaskAppCAN.c:202:33: warning: incompatible implicit declaration of built-in function 'memcpy' [-Wbuiltin-declaration-mismatch]
+../Core/Src/TaskAppCAN.c:202:33: note: include '<string.h>' or provide a declaration of 'memcpy'
+make: *** [Core/Src/subdir.mk:58: Core/Src/TaskAppCAN.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+08:54:04 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:191:17: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  191 |                 memset(u8Data,0,sizeof(u8Data));
+      |                 ^~~~~~
+../Core/Src/TaskAppCAN.c:8:1: note: include '<string.h>' or provide a declaration of 'memset'
+    7 | #include "TaskAppCAN.h"
+  +++ |+#include <string.h>
+    8 | extern void vTimerCallbackAppCAN(void const * argument);
+../Core/Src/TaskAppCAN.c:191:17: warning: incompatible implicit declaration of built-in function 'memset' [-Wbuiltin-declaration-mismatch]
+  191 |                 memset(u8Data,0,sizeof(u8Data));
+      |                 ^~~~~~
+../Core/Src/TaskAppCAN.c:191:17: note: include '<string.h>' or provide a declaration of 'memset'
+../Core/Src/TaskAppCAN.c:201:61: error: invalid type argument of unary '*' (have 'uint32_t' {aka 'long unsigned int'})
+  201 |                                 stAppCANMsg.pcMessageData = *pRxHeader.DLC;
+      |                                                             ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:202:33: warning: implicit declaration of function 'memcpy' [-Wimplicit-function-declaration]
+  202 |                                 memcpy(stAppCANMsg.pcMessageData,u8Data,pRxHeader.DLC);
+      |                                 ^~~~~~
+../Core/Src/TaskAppCAN.c:202:33: note: include '<string.h>' or provide a declaration of 'memcpy'
+../Core/Src/TaskAppCAN.c:202:33: warning: incompatible implicit declaration of built-in function 'memcpy' [-Wbuiltin-declaration-mismatch]
+../Core/Src/TaskAppCAN.c:202:33: note: include '<string.h>' or provide a declaration of 'memcpy'
+make: *** [Core/Src/subdir.mk:58: Core/Src/TaskAppCAN.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+08:54:11 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:191:17: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  191 |                 memset(u8Data,0,sizeof(u8Data));
+      |                 ^~~~~~
+../Core/Src/TaskAppCAN.c:8:1: note: include '<string.h>' or provide a declaration of 'memset'
+    7 | #include "TaskAppCAN.h"
+  +++ |+#include <string.h>
+    8 | extern void vTimerCallbackAppCAN(void const * argument);
+../Core/Src/TaskAppCAN.c:191:17: warning: incompatible implicit declaration of built-in function 'memset' [-Wbuiltin-declaration-mismatch]
+  191 |                 memset(u8Data,0,sizeof(u8Data));
+      |                 ^~~~~~
+../Core/Src/TaskAppCAN.c:191:17: note: include '<string.h>' or provide a declaration of 'memset'
+../Core/Src/TaskAppCAN.c:201:62: error: invalid type argument of unary '*' (have 'uint32_t' {aka 'long unsigned int'})
+  201 |                                 *stAppCANMsg.pcMessageData = *pRxHeader.DLC;
+      |                                                              ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:202:33: warning: implicit declaration of function 'memcpy' [-Wimplicit-function-declaration]
+  202 |                                 memcpy(stAppCANMsg.pcMessageData,u8Data,pRxHeader.DLC);
+      |                                 ^~~~~~
+../Core/Src/TaskAppCAN.c:202:33: note: include '<string.h>' or provide a declaration of 'memcpy'
+../Core/Src/TaskAppCAN.c:202:33: warning: incompatible implicit declaration of built-in function 'memcpy' [-Wbuiltin-declaration-mismatch]
+../Core/Src/TaskAppCAN.c:202:33: note: include '<string.h>' or provide a declaration of 'memcpy'
+make: *** [Core/Src/subdir.mk:58: Core/Src/TaskAppCAN.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+08:54:18 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:191:17: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  191 |                 memset(u8Data,0,sizeof(u8Data));
+      |                 ^~~~~~
+../Core/Src/TaskAppCAN.c:8:1: note: include '<string.h>' or provide a declaration of 'memset'
+    7 | #include "TaskAppCAN.h"
+  +++ |+#include <string.h>
+    8 | extern void vTimerCallbackAppCAN(void const * argument);
+../Core/Src/TaskAppCAN.c:191:17: warning: incompatible implicit declaration of built-in function 'memset' [-Wbuiltin-declaration-mismatch]
+  191 |                 memset(u8Data,0,sizeof(u8Data));
+      |                 ^~~~~~
+../Core/Src/TaskAppCAN.c:191:17: note: include '<string.h>' or provide a declaration of 'memset'
+../Core/Src/TaskAppCAN.c:202:33: warning: implicit declaration of function 'memcpy' [-Wimplicit-function-declaration]
+  202 |                                 memcpy(stAppCANMsg.pcMessageData,u8Data,pRxHeader.DLC);
+      |                                 ^~~~~~
+../Core/Src/TaskAppCAN.c:202:33: note: include '<string.h>' or provide a declaration of 'memcpy'
+../Core/Src/TaskAppCAN.c:202:33: warning: incompatible implicit declaration of built-in function 'memcpy' [-Wbuiltin-declaration-mismatch]
+../Core/Src/TaskAppCAN.c:202:33: note: include '<string.h>' or provide a declaration of 'memcpy'
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7808	  30668	   77cc	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+08:54:33 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:191:17: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  191 |                 memset(u8Data,0,sizeof(u8Data));
+      |                 ^~~~~~
+../Core/Src/TaskAppCAN.c:8:1: note: include '<string.h>' or provide a declaration of 'memset'
+    7 | #include "TaskAppCAN.h"
+  +++ |+#include <string.h>
+    8 | extern void vTimerCallbackAppCAN(void const * argument);
+../Core/Src/TaskAppCAN.c:191:17: warning: incompatible implicit declaration of built-in function 'memset' [-Wbuiltin-declaration-mismatch]
+  191 |                 memset(u8Data,0,sizeof(u8Data));
+      |                 ^~~~~~
+../Core/Src/TaskAppCAN.c:191:17: note: include '<string.h>' or provide a declaration of 'memset'
+../Core/Src/TaskAppCAN.c:202:33: warning: implicit declaration of function 'memcpy' [-Wimplicit-function-declaration]
+  202 |                                 memcpy(stAppCANMsg.pcMessageData,u8Data,*pRxHeader.DLC);
+      |                                 ^~~~~~
+../Core/Src/TaskAppCAN.c:202:33: note: include '<string.h>' or provide a declaration of 'memcpy'
+../Core/Src/TaskAppCAN.c:202:33: warning: incompatible implicit declaration of built-in function 'memcpy' [-Wbuiltin-declaration-mismatch]
+../Core/Src/TaskAppCAN.c:202:33: note: include '<string.h>' or provide a declaration of 'memcpy'
+../Core/Src/TaskAppCAN.c:202:73: error: invalid type argument of unary '*' (have 'uint32_t' {aka 'long unsigned int'})
+  202 |                                 memcpy(stAppCANMsg.pcMessageData,u8Data,*pRxHeader.DLC);
+      |                                                                         ^~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:58: Core/Src/TaskAppCAN.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+08:54:42 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:191:17: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  191 |                 memset(u8Data,0,sizeof(u8Data));
+      |                 ^~~~~~
+../Core/Src/TaskAppCAN.c:8:1: note: include '<string.h>' or provide a declaration of 'memset'
+    7 | #include "TaskAppCAN.h"
+  +++ |+#include <string.h>
+    8 | extern void vTimerCallbackAppCAN(void const * argument);
+../Core/Src/TaskAppCAN.c:191:17: warning: incompatible implicit declaration of built-in function 'memset' [-Wbuiltin-declaration-mismatch]
+  191 |                 memset(u8Data,0,sizeof(u8Data));
+      |                 ^~~~~~
+../Core/Src/TaskAppCAN.c:191:17: note: include '<string.h>' or provide a declaration of 'memset'
+../Core/Src/TaskAppCAN.c:202:33: warning: implicit declaration of function 'memcpy' [-Wimplicit-function-declaration]
+  202 |                                 memcpy(stAppCANMsg.pcMessageData,u8Data,pRxHeader.DLC);
+      |                                 ^~~~~~
+../Core/Src/TaskAppCAN.c:202:33: note: include '<string.h>' or provide a declaration of 'memcpy'
+../Core/Src/TaskAppCAN.c:202:33: warning: incompatible implicit declaration of built-in function 'memcpy' [-Wbuiltin-declaration-mismatch]
+../Core/Src/TaskAppCAN.c:202:33: note: include '<string.h>' or provide a declaration of 'memcpy'
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7808	  30668	   77cc	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+08:55:51 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/freertos.o"
+In file included from ../Core/Src/TaskAppCAN.c:7:
+../Core/Inc/TaskAppCAN.h:17:10: fatal error: cstring.h: No such file or directory
+   17 | #include <cstring.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:58: Core/Src/TaskAppCAN.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/Src/freertos.c:29:
+../Core/Inc/TaskAppCAN.h:17:10: fatal error: cstring.h: No such file or directory
+   17 | #include <cstring.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:58: Core/Src/freertos.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+08:56:18 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/freertos.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7808	  30668	   77cc	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+08:56:26 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7808	  30668	   77cc	rvb.elf
+Finished building: default.size.stdout
+ 
+08:57:51 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7808	  30668	   77cc	rvb.elf
+Finished building: default.size.stdout
+ 
+08:57:53 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7808	  30668	   77cc	rvb.elf
+Finished building: default.size.stdout
+ 
+08:58:19 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7808	  30668	   77cc	rvb.elf
+Finished building: default.size.stdout
+ 
+08:58:30 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7808	  30668	   77cc	rvb.elf
+Finished building: default.size.stdout
+ 
+08:59:37 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:200:33: warning: value computed is not used [-Wunused-value]
+  200 |                                 *stAppCANMsg.pcMessageData++;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7808	  30668	   77cc	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+08:59:41 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7808	  30668	   77cc	rvb.elf
+Finished building: default.size.stdout
+ 
+09:00:12 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7808	  30668	   77cc	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:00:15 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7808	  30668	   77cc	rvb.elf
+Finished building: default.size.stdout
+ 
+09:01:00 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:199:71: error: invalid type argument of '->' (have 'CAN_RxHeaderTypeDef')
+  199 |                                 *stAppCANMsg.pcMessageData = pRxHeader->StdId;
+      |                                                                       ^~
+make: *** [Core/Src/subdir.mk:58: Core/Src/TaskAppCAN.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+09:01:15 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:199:72: error: invalid type argument of '->' (have 'CAN_RxHeaderTypeDef')
+  199 |                                 *stAppCANMsg.pcMessageData = &pRxHeader->StdId;
+      |                                                                        ^~
+make: *** [Core/Src/subdir.mk:58: Core/Src/TaskAppCAN.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+09:01:27 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7808	  30668	   77cc	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:01:39 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:199:59: warning: assignment to 'char *' from 'uint32_t' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+  199 |                                 stAppCANMsg.pcMessageData = pRxHeader.StdId;
+      |                                                           ^
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7808	  30668	   77cc	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:08:04 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22732	     96	   7808	  30636	   77ac	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:08:12 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22732	     96	   7808	  30636	   77ac	rvb.elf
+Finished building: default.size.stdout
+ 
+09:09:01 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:199:40: warning: passing argument 1 of 'memcpy' makes pointer from integer without a cast [-Wint-conversion]
+  199 |                                 memcpy(*stAppCANMsg.pcMessageData,&u8Data[0],pRxHeader.DLC);
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                        |
+      |                                        char
+In file included from ../Core/Inc/TaskAppCAN.h:17,
+                 from ../Core/Src/TaskAppCAN.c:7:
+/opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/string.h:31:18: note: expected 'void * restrict' but argument is of type 'char'
+   31 | void *   memcpy (void *__restrict, const void *__restrict, size_t);
+      |                  ^
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22732	     96	   7808	  30636	   77ac	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:09:06 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22732	     96	   7808	  30636	   77ac	rvb.elf
+Finished building: default.size.stdout
+ 
+09:10:09 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22732	     96	   7808	  30636	   77ac	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:10:19 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22732	     96	   7808	  30636	   77ac	rvb.elf
+Finished building: default.size.stdout
+ 
+09:12:30 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:199:58: error: 'pRHeader' undeclared (first use in this function); did you mean 'pRxHeader'?
+  199 |                                 for(uint8_t u8 = 0; u8 < pRHeader.DLC; u8++)
+      |                                                          ^~~~~~~~
+      |                                                          pRxHeader
+../Core/Src/TaskAppCAN.c:199:58: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/TaskAppCAN.c:201:67: warning: assignment to 'char *' from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  201 |                                         stAppCANMsg.pcMessageData = u8Data[u8];
+      |                                                                   ^
+make: *** [Core/Src/subdir.mk:58: Core/Src/TaskAppCAN.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+09:12:42 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:201:67: warning: assignment to 'char *' from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  201 |                                         stAppCANMsg.pcMessageData = u8Data[u8];
+      |                                                                   ^
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22748	     96	   7808	  30652	   77bc	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:13:05 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:201:67: warning: assignment to 'char *' from 'char' makes pointer from integer without a cast [-Wint-conversion]
+  201 |                                         stAppCANMsg.pcMessageData = (char)u8Data[u8];
+      |                                                                   ^
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22748	     96	   7808	  30652	   77bc	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:13:11 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:201:69: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  201 |                                         stAppCANMsg.pcMessageData = (char*)u8Data[u8];
+      |                                                                     ^
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22748	     96	   7808	  30652	   77bc	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:13:27 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:201:67: warning: assignment to 'char *' from 'char' makes pointer from integer without a cast [-Wint-conversion]
+  201 |                                         stAppCANMsg.pcMessageData = (char)u8Data[u8];
+      |                                                                   ^
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22748	     96	   7808	  30652	   77bc	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:13:51 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:201:69: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  201 |                                         stAppCANMsg.pcMessageData = (char*)(u8Data[u8]);
+      |                                                                     ^
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22748	     96	   7808	  30652	   77bc	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:14:08 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:201:67: warning: assignment to 'char *' from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  201 |                                         stAppCANMsg.pcMessageData = (u8Data[u8]);
+      |                                                                   ^
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22748	     96	   7808	  30652	   77bc	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:14:18 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:201:67: warning: assignment to 'char *' from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  201 |                                         stAppCANMsg.pcMessageData = u8Data[u8];
+      |                                                                   ^
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22748	     96	   7808	  30652	   77bc	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:14:40 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:201:67: warning: assignment to 'char *' from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  201 |                                         stAppCANMsg.pcMessageData = u8Data[u8];
+      |                                                                   ^
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22748	     96	   7808	  30652	   77bc	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:14:44 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22748	     96	   7808	  30652	   77bc	rvb.elf
+Finished building: default.size.stdout
+ 
+09:17:19 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:57:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:57:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   57 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:199:59: warning: pointer targets in assignment from 'uint8_t *' {aka 'unsigned char *'} to 'char *' differ in signedness [-Wpointer-sign]
+  199 |                                 stAppCANMsg.pcMessageData = u8Data;
+      |                                                           ^
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22716	     96	   7808	  30620	   779c	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:17:25 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22716	     96	   7808	  30620	   779c	rvb.elf
+Finished building: default.size.stdout
+ 
+09:39:46 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:66:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:66:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:200:62: error: 'u8Data' undeclared (first use in this function)
+  200 |                 memset(stFrameCAN[u8FifoCAN].u8Data,0,sizeof(u8Data));
+      |                                                              ^~~~~~
+../Core/Src/TaskAppCAN.c:200:62: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:58: Core/Src/TaskAppCAN.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+09:41:09 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:66:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:66:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:201:71: error: 'u8Data' undeclared (first use in this function)
+  201 |                 if(HAL_CAN_GetRxMessage(hCAN, CAN_RX_FIFO0,&pRxHeader,u8Data) == HAL_OK)
+      |                                                                       ^~~~~~
+../Core/Src/TaskAppCAN.c:201:71: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:58: Core/Src/TaskAppCAN.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+09:41:27 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:66:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:66:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:201:71: error: 'u8Data' undeclared (first use in this function)
+  201 |                 if(HAL_CAN_GetRxMessage(hCAN, CAN_RX_FIFO0,&pRxHeader,u8Data) == HAL_OK)
+      |                                                                       ^~~~~~
+../Core/Src/TaskAppCAN.c:201:71: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:58: Core/Src/TaskAppCAN.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+09:41:40 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:66:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:66:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:209:76: error: 'u8Data' undeclared (first use in this function)
+  209 |                                         stFrameCAN[u8FifoCAN].u8Data[u8] = u8Data[u8];
+      |                                                                            ^~~~~~
+../Core/Src/TaskAppCAN.c:209:76: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:58: Core/Src/TaskAppCAN.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+09:41:51 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:66:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:66:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7928	  30788	   7844	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:41:54 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7928	  30788	   7844	rvb.elf
+Finished building: default.size.stdout
+ 
+09:43:04 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7928	  30788	   7844	rvb.elf
+Finished building: default.size.stdout
+ 
+09:48:50 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:66:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:66:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:210:61: error: incompatible types when assigning to type 'char *' from type 'tstFrameCAN'
+  210 |                                 stAppCANMsg.pcMessageData = stFrameCAN[u8FifoCAN];
+      |                                                             ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:58: Core/Src/TaskAppCAN.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+09:48:57 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:66:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:66:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'vTaskAppCAN':
+../Core/Src/TaskAppCAN.c:210:59: warning: assignment to 'char *' from incompatible pointer type 'tstFrameCAN *' [-Wincompatible-pointer-types]
+  210 |                                 stAppCANMsg.pcMessageData = &stFrameCAN[u8FifoCAN];
+      |                                                           ^
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7928	  30788	   7844	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:49:10 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:66:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:66:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7928	  30788	   7844	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:49:18 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7928	  30788	   7844	rvb.elf
+Finished building: default.size.stdout
+ 
+09:58:31 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:66:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:66:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_ReceiveEvent':
+../Core/Src/TaskAppCAN.c:86:11: warning: unused variable 'pcFrameCAN' [-Wunused-variable]
+   86 |     char *pcFrameCAN = psMessage->pcMessageData;
+      |           ^~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7928	  30788	   7844	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:58:59 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:66:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:66:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_ReceiveEvent':
+../Core/Src/TaskAppCAN.c:86:11: warning: unused variable 'pcFrameCAN' [-Wunused-variable]
+   86 |     char *pcFrameCAN = psMessage->pcMessageData;
+      |           ^~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7928	  30788	   7844	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+10:09:54 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:66:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:66:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_ReceiveEvent':
+../Core/Src/TaskAppCAN.c:86:18: warning: unused variable 'pstFrameCAN' [-Wunused-variable]
+   86 |     tstFrameCAN *pstFrameCAN = (tstFrameCAN*)(psMessage->pcMessageData);
+      |                  ^~~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7928	  30788	   7844	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+10:10:03 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7928	  30788	   7844	rvb.elf
+Finished building: default.size.stdout
+ 
+16:32:55 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:66:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:66:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   66 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_ReceiveEvent':
+../Core/Src/TaskAppCAN.c:86:18: warning: unused variable 'pstFrameCAN' [-Wunused-variable]
+   86 |     tstFrameCAN *pstFrameCAN = (tstFrameCAN*)(psMessage->pcMessageData);
+      |                  ^~~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22764	     96	   7928	  30788	   7844	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+16:58:49 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+arm-none-eabi-gcc "../Core/Src/TaskIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskIO.d" -MT"Core/Src/TaskIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskIO.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/state.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/state.d" -MT"Core/Src/state.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:67:37: warning: variable 'enStatusFilter' set but not used [-Wunused-but-set-variable]
+   67 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                                     ^~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:67:23: warning: variable 'enStatusStart' set but not used [-Wunused-but-set-variable]
+   67 |     HAL_StatusTypeDef enStatusStart,enStatusFilter;
+      |                       ^~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_ReceiveEvent':
+../Core/Src/TaskAppCAN.c:86:18: warning: unused variable 'pstFrameCAN' [-Wunused-variable]
+   86 |     tstFrameCAN *pstFrameCAN = (tstFrameCAN*)(psMessage->pcMessageData);
+      |                  ^~~~~~~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  22828	     96	   7936	  30860	   788c	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
