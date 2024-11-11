@@ -113,5 +113,9 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 }
 
 /* USER CODE BEGIN 1 */
+UART_HandleTypeDef *hGet_USART_Handler(void)
+{
+	return &huart1;
+}
 
 /* USER CODE END 1 */

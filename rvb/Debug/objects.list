@@ -1,4 +1,5 @@
 "./Core/Src/TaskAppCAN.o"
+"./Core/Src/TaskAppSerial.o"
 "./Core/Src/TaskIO.o"
 "./Core/Src/can.o"
 "./Core/Src/freertos.o"

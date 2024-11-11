@@ -1,0 +1,7 @@
+../Core/Src/TaskAppSerial.c:30:6:TaskAppSerial_Entry	16	static
+../Core/Src/TaskAppSerial.c:49:15:TaskAppSerial_Start	24	static
+../Core/Src/TaskAppSerial.c:65:15:TaskAppSerial_ReceiveEvent	24	static
+../Core/Src/TaskAppSerial.c:80:15:TaskAppSerial_TransmitEvent	40	static
+../Core/Src/TaskAppSerial.c:100:15:TaskAppSerial_IgnoreEvent	24	static
+../Core/Src/TaskAppSerial.c:114:6:vTimerCallbackAppSerial	16	static
+../Core/Src/TaskAppSerial.c:148:6:vTaskAppSerial	16	static

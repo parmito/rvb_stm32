@@ -1,7 +1,7 @@
-../Core/Src/TaskAppCAN.c:45:6:TaskAppCAN_Entry	1
-../Core/Src/TaskAppCAN.c:64:15:TaskAppCAN_Start	1
-../Core/Src/TaskAppCAN.c:82:15:TaskAppCAN_ReceiveEvent	1
-../Core/Src/TaskAppCAN.c:98:15:TaskAppCAN_TransmitEvent	1
-../Core/Src/TaskAppCAN.c:111:15:TaskAppCAN_IgnoreEvent	1
-../Core/Src/TaskAppCAN.c:125:6:vTimerCallbackAppCAN	5
-../Core/Src/TaskAppCAN.c:194:6:vTaskAppCAN	6
+../Core/Src/TaskAppCAN.c:38:6:TaskAppCAN_Entry	1
+../Core/Src/TaskAppCAN.c:57:15:TaskAppCAN_Start	1
+../Core/Src/TaskAppCAN.c:75:15:TaskAppCAN_ReceiveEvent	1
+../Core/Src/TaskAppCAN.c:91:15:TaskAppCAN_TransmitEvent	2
+../Core/Src/TaskAppCAN.c:124:15:TaskAppCAN_IgnoreEvent	1
+../Core/Src/TaskAppCAN.c:138:6:vTimerCallbackAppCAN	1
+../Core/Src/TaskAppCAN.c:174:6:vTaskAppCAN	8

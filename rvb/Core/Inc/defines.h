@@ -10,8 +10,8 @@
 #define false   (char)(0)
 #define true 	(char)(1)
 
-#define NUM_QUEUE 1
-#define NUM_TASKS 2
+#define NUM_QUEUE 4
+#define NUM_TASKS 4
 
 #define DEBUG_IO					1
 #define DEBUG_APPCAN				1
@@ -34,6 +34,11 @@
 #define EVENT_APPCAN_TX 			(unsigned char)2
 #define	EVENT_APPCAN_NULL			(unsigned char)3
 
+#define EVENT_APPSERIAL_INIT 	    (unsigned char)0
+#define EVENT_APPSERIAL_RX			(unsigned char)1
+#define EVENT_APPSERIAL_TX 			(unsigned char)2
+#define	EVENT_APPSERIAL_NULL		(unsigned char)3
+
 /* States*/
 #define TASKIO_IO_INITIALIZING    	(unsigned char)0
 #define TASKIO_IO_FLASHING	    	(unsigned char)1
@@ -43,12 +48,18 @@
 #define TASK_APPCAN_RUNNING		 	(unsigned char)1
 #define TASK_APPCAN_SLEEPING    	(unsigned char)2
 
+#define TASK_APPSERIAL_INITIALIZING 	(unsigned char)0
+#define TASK_APPSERIAL_RUNNING		 	(unsigned char)1
+#define TASK_APPSERIAL_SLEEPING    		(unsigned char)2
+
+
  /* Timers*/
 #define TIMER_IO_FLASHING			(unsigned char)0
 #define TIMER_APPCAN_FLASHING		(unsigned char)0
 /* Installed sources*/
 #define SRC_IO     		1
 #define SRC_APPCAN   	1
+#define SRC_APPSERIAL  	1
 
 
 

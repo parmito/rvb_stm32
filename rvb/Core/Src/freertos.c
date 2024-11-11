@@ -27,6 +27,7 @@
 /* USER CODE BEGIN Includes */
 #include "TaskIO.h"
 #include "TaskAppCAN.h"
+#include "TaskAppSerial.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -49,11 +50,11 @@
 
 /* USER CODE END Variables */
 osThreadId TaskIOHandle;
-osThreadId TaskIsoTpHandle;
 osThreadId TaskAppCANHandle;
 osThreadId TaskAppSerialHandle;
+uint32_t TaskAppSerialBuffer[ 128 ];
+osStaticThreadDef_t TaskAppSerialControlBlock;
 osMessageQId QueueIOHandle;
-osMessageQId QueueIsoTpHandle;
 osMessageQId QueueAppCANHandle;
 osMessageQId QueueAppSerialHandle;
 osTimerId TimerIOHandle;
@@ -64,7 +65,6 @@ osTimerId TimerIOHandle;
 /* USER CODE END FunctionPrototypes */
 
 void TaskIO_Init(void const * argument);
-void TaskIsoTp_Init(void const * argument);
 void TaskAppCAN_Init(void const * argument);
 void TaskAppSerial_Init(void const * argument);
 void vTimerCallbackIo(void const * argument);
@@ -135,10 +135,6 @@ void MX_FREERTOS_Init(void) {
   osMessageQDef(QueueIO, 16, uint16_t);
   QueueIOHandle = osMessageCreate(osMessageQ(QueueIO), NULL);
 
-  /* definition and creation of QueueIsoTp */
-  osMessageQDef(QueueIsoTp, 16, uint16_t);
-  QueueIsoTpHandle = osMessageCreate(osMessageQ(QueueIsoTp), NULL);
-
   /* definition and creation of QueueAppCAN */
   osMessageQDef(QueueAppCAN, 16, uint16_t);
   QueueAppCANHandle = osMessageCreate(osMessageQ(QueueAppCAN), NULL);
@@ -154,19 +150,15 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* definition and creation of TaskIO */
-  osThreadDef(TaskIO, TaskIO_Init, osPriorityNormal, 0, 128);
+  osThreadDef(TaskIO, TaskIO_Init, osPriorityIdle, 0, 128);
   TaskIOHandle = osThreadCreate(osThread(TaskIO), NULL);
-
-  /* definition and creation of TaskIsoTp */
-  osThreadDef(TaskIsoTp, TaskIsoTp_Init, osPriorityIdle, 0, 128);
-  TaskIsoTpHandle = osThreadCreate(osThread(TaskIsoTp), NULL);
 
   /* definition and creation of TaskAppCAN */
   osThreadDef(TaskAppCAN, TaskAppCAN_Init, osPriorityIdle, 0, 128);
   TaskAppCANHandle = osThreadCreate(osThread(TaskAppCAN), NULL);
 
   /* definition and creation of TaskAppSerial */
-  osThreadDef(TaskAppSerial, TaskAppSerial_Init, osPriorityIdle, 0, 128);
+  osThreadStaticDef(TaskAppSerial, TaskAppSerial_Init, osPriorityLow, 0, 128, TaskAppSerialBuffer, &TaskAppSerialControlBlock);
   TaskAppSerialHandle = osThreadCreate(osThread(TaskAppSerial), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
@@ -193,24 +185,6 @@ void TaskIO_Init(void const * argument)
     vTaskIO(argument);
   }
   /* USER CODE END TaskIO_Init */
-}
-
-/* USER CODE BEGIN Header_TaskIsoTp_Init */
-/**
-* @brief Function implementing the TaskIsoTp thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_TaskIsoTp_Init */
-void TaskIsoTp_Init(void const * argument)
-{
-  /* USER CODE BEGIN TaskIsoTp_Init */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END TaskIsoTp_Init */
 }
 
 /* USER CODE BEGIN Header_TaskAppCAN_Init */
@@ -244,9 +218,11 @@ void TaskAppSerial_Init(void const * argument)
 {
   /* USER CODE BEGIN TaskAppSerial_Init */
   /* Infinite loop */
+  TaskAppSerial_Entry(&QueueAppSerialHandle,NULL);
   for(;;)
   {
     osDelay(1);
+    vTaskAppSerial(argument);
   }
   /* USER CODE END TaskAppSerial_Init */
 }
