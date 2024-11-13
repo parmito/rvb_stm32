@@ -17,11 +17,11 @@ static sMessageType stAppSerialMsg;
 static UART_HandleTypeDef *hUSART;
 
 #define FIFO_SIZE 8
-/*static uint8_t u8FrameRxUSART[64];*/
-static uint8_t u8FrameTxUSART[64];
-/*static uint8_t u8FifoRxUSART = 0;
+static uint8_t u8FrameRxUSART[128];
+static uint8_t u8FrameTxUSART[128];
+static uint8_t u8FifoRxUSART = 0;
 static uint8_t u8FifoTxUSART = 0;
-static uint16_t u16TimeSlice = 0;*/
+static uint16_t u16TimeSlice = 0;
 
 
 //////////////////////////////////////////////
@@ -33,7 +33,7 @@ static uint16_t u16TimeSlice = 0;*/
 //////////////////////////////////////////////
 QueueHandle_t *TaskAppSerial_getQueue()
 {
-	return &xQueueAppSerial;
+	return xQueueAppSerial;
 }
 
 //////////////////////////////////////////////

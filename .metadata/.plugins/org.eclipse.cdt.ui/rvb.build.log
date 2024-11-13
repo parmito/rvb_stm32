@@ -1,10 +1,10 @@
-16:21:13 **** Incremental Build of configuration Debug for project rvb ****
+16:36:10 **** Incremental Build of configuration Debug for project rvb ****
 make -j6 all 
 arm-none-eabi-size  rvb.elf 
    text	   data	    bss	    dec	    hex	filename
-  24672	    124	   8228	  33024	   8100	rvb.elf
+  24748	    100	   8172	  33020	   80fc	rvb.elf
 Finished building: default.size.stdout
  
 
-16:21:13 Build Finished. 0 errors, 0 warnings. (took 173ms)
+16:36:10 Build Finished. 0 errors, 0 warnings. (took 226ms)
 

@@ -131,15 +131,15 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the queue(s) */
   /* definition and creation of QueueIO */
-  osMessageQDef(QueueIO, 16, sMessageType);
+  osMessageQDef(QueueIO, 8, sMessageType);
   QueueIOHandle = osMessageCreate(osMessageQ(QueueIO), NULL);
 
   /* definition and creation of QueueAppCAN */
-  osMessageQDef(QueueAppCAN, 16, sMessageType);
+  osMessageQDef(QueueAppCAN, 8, sMessageType);
   QueueAppCANHandle = osMessageCreate(osMessageQ(QueueAppCAN), NULL);
 
   /* definition and creation of QueueAppSerial */
-  osMessageQDef(QueueAppSerial, 16, sMessageType);
+  osMessageQDef(QueueAppSerial, 8, sMessageType);
   QueueAppSerialHandle = osMessageCreate(osMessageQ(QueueAppSerial), NULL);
 
   /* USER CODE BEGIN RTOS_QUEUES */

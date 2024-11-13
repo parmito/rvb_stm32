@@ -118,7 +118,7 @@ unsigned char TaskAppCAN_TransmitEvent(sMessageType *psMessage)
     stAppCANMsg.ucEvent = EVENT_APPSERIAL_TX;
 
     strcpy(pu8SerialTxBuffer,"SURDAO\r\n");
-    stAppCANMsg.pcMessageData = (char*)pu8SerialTxBuffer;
+    stAppCANMsg.pcMessageData = pu8SerialTxBuffer;
 
     xQueueGenericSend(*pstQueueAppSerial, &stAppCANMsg, 0,0);
 

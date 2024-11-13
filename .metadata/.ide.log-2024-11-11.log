@@ -1405,3 +1405,111 @@
 2024-11-13 16:13:57,980 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 494mS.
 2024-11-13 16:13:57,980 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
 2024-11-13 16:13:57,980 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-13 16:32:37,262 [INFO] TasksAndQueuesTab:757 - Dynamic
+2024-11-13 16:32:37,262 [WARN] TasksAndQueuesTab:763 - 128 128
+2024-11-13 16:32:37,262 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2024-11-13 16:32:37,262 [INFO] TasksAndQueuesTab:757 - Dynamic
+2024-11-13 16:32:37,262 [WARN] TasksAndQueuesTab:763 - 128 128
+2024-11-13 16:32:37,262 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2024-11-13 16:32:37,262 [INFO] TasksAndQueuesTab:757 - Dynamic
+2024-11-13 16:32:37,262 [WARN] TasksAndQueuesTab:763 - 128 128
+2024-11-13 16:32:37,262 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2024-11-13 16:32:40,720 [INFO] TasksAndQueuesTab:757 - Dynamic
+2024-11-13 16:32:40,720 [WARN] TasksAndQueuesTab:763 - 128 128
+2024-11-13 16:32:40,720 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2024-11-13 16:32:40,720 [INFO] TasksAndQueuesTab:757 - Dynamic
+2024-11-13 16:32:40,720 [WARN] TasksAndQueuesTab:763 - 128 128
+2024-11-13 16:32:40,720 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2024-11-13 16:32:40,720 [INFO] TasksAndQueuesTab:757 - Dynamic
+2024-11-13 16:32:40,720 [WARN] TasksAndQueuesTab:763 - 128 128
+2024-11-13 16:32:40,720 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2024-11-13 16:32:44,431 [INFO] TasksAndQueuesTab:757 - Dynamic
+2024-11-13 16:32:44,431 [WARN] TasksAndQueuesTab:763 - 128 128
+2024-11-13 16:32:44,431 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2024-11-13 16:32:44,431 [INFO] TasksAndQueuesTab:757 - Dynamic
+2024-11-13 16:32:44,431 [WARN] TasksAndQueuesTab:763 - 128 128
+2024-11-13 16:32:44,431 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2024-11-13 16:32:44,431 [INFO] TasksAndQueuesTab:757 - Dynamic
+2024-11-13 16:32:44,431 [WARN] TasksAndQueuesTab:763 - 128 128
+2024-11-13 16:32:44,431 [WARN] TasksAndQueuesTab:775 - max value is: 768.0
+2024-11-13 16:32:47,096 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 359862776 Bytes (955252736)
+2024-11-13 16:32:48,260 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 379186536 Bytes (955252736)
+2024-11-13 16:32:49,658 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 440555280 Bytes (955252736)
+2024-11-13 16:32:49,750 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: NVIC
+2024-11-13 16:32:49,750 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: SYS
+2024-11-13 16:32:49,752 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: GPIO
+2024-11-13 16:32:49,752 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: FREERTOS
+2024-11-13 16:32:49,752 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: USART
+2024-11-13 16:32:49,752 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: CAN
+2024-11-13 16:32:49,753 [INFO] BlockDiagram:2766 - set Specific Code input for plugin: RCC
+2024-11-13 16:32:49,753 [INFO] CodeGenerator:807 - code generatio: config db path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db/
+2024-11-13 16:32:49,831 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/license.tmp_save
+2024-11-13 16:32:49,934 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/license.tmp
+2024-11-13 16:32:49,950 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Src/gpio.c_save
+2024-11-13 16:32:50,012 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Src/gpio.c
+2024-11-13 16:32:50,013 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Inc/gpio.h_save
+2024-11-13 16:32:50,057 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Inc/gpio.h
+2024-11-13 16:32:50,091 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-11-13 16:32:50,093 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_inc.tmp_save
+2024-11-13 16:32:50,136 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_inc.tmp
+2024-11-13 16:32:50,136 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_vars.tmp_save
+2024-11-13 16:32:50,183 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_vars.tmp
+2024-11-13 16:32:50,183 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_pfp.tmp_save
+2024-11-13 16:32:50,228 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_pfp.tmp
+2024-11-13 16:32:50,228 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_obj_creat.tmp_save
+2024-11-13 16:32:50,275 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_obj_creat.tmp
+2024-11-13 16:32:50,275 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_kernelStart.tmp_save
+2024-11-13 16:32:50,320 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_kernelStart.tmp
+2024-11-13 16:32:50,320 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_default_thread.tmp_save
+2024-11-13 16:32:50,365 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_default_thread.tmp
+2024-11-13 16:32:50,366 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_threads.tmp_save
+2024-11-13 16:32:50,409 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_threads.tmp
+2024-11-13 16:32:50,413 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-11-13 16:32:50,415 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_inc.tmp_save
+2024-11-13 16:32:50,464 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_inc.tmp
+2024-11-13 16:32:50,464 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_vars.tmp_save
+2024-11-13 16:32:50,508 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_vars.tmp
+2024-11-13 16:32:50,508 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_pfp.tmp_save
+2024-11-13 16:32:50,551 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_pfp.tmp
+2024-11-13 16:32:50,552 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_obj_creat.tmp_save
+2024-11-13 16:32:50,597 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_obj_creat.tmp
+2024-11-13 16:32:50,598 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_kernelStart.tmp_save
+2024-11-13 16:32:50,640 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_kernelStart.tmp
+2024-11-13 16:32:50,641 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_default_thread.tmp_save
+2024-11-13 16:32:50,684 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_default_thread.tmp
+2024-11-13 16:32:50,685 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_threads.tmp_save
+2024-11-13 16:32:50,728 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/rtos_threads.tmp
+2024-11-13 16:32:50,729 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Inc/FreeRTOSConfig.h_save
+2024-11-13 16:32:50,784 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Inc/FreeRTOSConfig.h
+2024-11-13 16:32:50,785 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Src/freertos.c_save
+2024-11-13 16:32:50,839 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Src/freertos.c
+2024-11-13 16:32:50,841 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Src/can.c_save
+2024-11-13 16:32:50,914 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Src/can.c
+2024-11-13 16:32:50,914 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Inc/can.h_save
+2024-11-13 16:32:50,959 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Inc/can.h
+2024-11-13 16:32:50,961 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Src/usart.c_save
+2024-11-13 16:32:51,026 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Src/usart.c
+2024-11-13 16:32:51,026 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Inc/usart.h_save
+2024-11-13 16:32:51,071 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Inc/usart.h
+2024-11-13 16:32:51,073 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Src/stm32f1xx_it.c_save
+2024-11-13 16:32:51,202 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Src/stm32f1xx_it.c
+2024-11-13 16:32:51,203 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Inc/stm32f1xx_it.h_save
+2024-11-13 16:32:51,252 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Inc/stm32f1xx_it.h
+2024-11-13 16:32:51,254 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Src/stm32f1xx_hal_msp.c_save
+2024-11-13 16:32:51,340 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Src/stm32f1xx_hal_msp.c
+2024-11-13 16:32:51,341 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/system.tmp_save
+2024-11-13 16:32:51,385 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/MXTmpFiles/system.tmp
+2024-11-13 16:32:51,385 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Src/stm32f1xx_hal_timebase_tim.c_save
+2024-11-13 16:32:51,432 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Src/stm32f1xx_hal_timebase_tim.c
+2024-11-13 16:32:51,433 [INFO] CodeEngine:311 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Inc/stm32f1xx_hal_conf.h_save
+2024-11-13 16:32:51,481 [INFO] CodeEngine:335 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Inc/stm32f1xx_hal_conf.h
+2024-11-13 16:32:51,488 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Inc/main.h_save
+2024-11-13 16:32:51,543 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Inc/main.h
+2024-11-13 16:32:51,544 [INFO] CodeEngine:255 - oldGeneratedFile, /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Src/main.c_save
+2024-11-13 16:32:51,603 [INFO] CodeEngine:279 - Generated code: /home/volkswagen2/Documentos/danilo-franco/rvb/rvb/Core/Src/main.c
+2024-11-13 16:32:51,751 [INFO] ProjectBuilder:3249 - Time for Copy HAL[2] : 0mS.
+2024-11-13 16:32:51,753 [INFO] ProjectBuilder:4828 - Project Generator version: 4.5.0-B34
+2024-11-13 16:32:51,832 [INFO] ConfigFileManager:1531 - The Die is : DIE412
+2024-11-13 16:32:52,191 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 438mS.
+2024-11-13 16:32:52,191 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-13 16:32:52,192 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.

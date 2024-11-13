@@ -1,8 +1,9 @@
 ../Core/Src/TaskAppSerial.c:34:16:TaskAppSerial_getQueue	4	static
-../Core/Src/TaskAppSerial.c:47:6:TaskAppSerial_Entry	16	static
-../Core/Src/TaskAppSerial.c:66:15:TaskAppSerial_Start	24	static
-../Core/Src/TaskAppSerial.c:81:15:TaskAppSerial_ReceiveEvent	24	static
-../Core/Src/TaskAppSerial.c:94:15:TaskAppSerial_TransmitEvent	32	static
-../Core/Src/TaskAppSerial.c:114:15:TaskAppSerial_IgnoreEvent	24	static
-../Core/Src/TaskAppSerial.c:128:6:vTimerCallbackAppSerial	16	static
-../Core/Src/TaskAppSerial.c:162:6:vTaskAppSerial	16	static
+../Core/Src/TaskAppSerial.c:46:10:TaskAppSerial_getTxBuffer	4	static
+../Core/Src/TaskAppSerial.c:60:6:TaskAppSerial_Entry	16	static
+../Core/Src/TaskAppSerial.c:79:15:TaskAppSerial_Start	24	static
+../Core/Src/TaskAppSerial.c:94:15:TaskAppSerial_ReceiveEvent	24	static
+../Core/Src/TaskAppSerial.c:107:15:TaskAppSerial_TransmitEvent	32	static
+../Core/Src/TaskAppSerial.c:127:15:TaskAppSerial_IgnoreEvent	24	static
+../Core/Src/TaskAppSerial.c:141:6:vTimerCallbackAppSerial	16	static
+../Core/Src/TaskAppSerial.c:175:6:vTaskAppSerial	16	static

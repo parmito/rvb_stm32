@@ -26,6 +26,5 @@ unsigned char TaskAppSerial_IgnoreEvent(sMessageType *psMessage);
 void vLocalTimerCallbackAppSerial(void const * argument);
 void vTaskAppSerial(void const * argument);
 QueueHandle_t *TaskAppSerial_getQueue(void);
-uint8_t *TaskAppSerial_getTxBuffer(void);
 
 #endif /* INC_TASKAPPSERIAL_H_ */

@@ -1,7 +1,7 @@
 ../Core/Src/TaskAppCAN.c:39:6:TaskAppCAN_Entry	16	static
 ../Core/Src/TaskAppCAN.c:58:15:TaskAppCAN_Start	24	static
-../Core/Src/TaskAppCAN.c:76:15:TaskAppCAN_ReceiveEvent	24	static
-../Core/Src/TaskAppCAN.c:94:15:TaskAppCAN_TransmitEvent	24	static
+../Core/Src/TaskAppCAN.c:77:15:TaskAppCAN_ReceiveEvent	24	static
+../Core/Src/TaskAppCAN.c:93:15:TaskAppCAN_TransmitEvent	24	static
 ../Core/Src/TaskAppCAN.c:135:15:TaskAppCAN_IgnoreEvent	24	static
 ../Core/Src/TaskAppCAN.c:149:6:vTimerCallbackAppCAN	16	static
 ../Core/Src/TaskAppCAN.c:185:6:vTaskAppCAN	16	static

@@ -33,7 +33,7 @@ static uint16_t u16TimeSlice = 0;*/
 //////////////////////////////////////////////
 QueueHandle_t *TaskAppSerial_getQueue()
 {
-	return &xQueueAppSerial;
+	return xQueueAppSerial;
 }
 
 //////////////////////////////////////////////
