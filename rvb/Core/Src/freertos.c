@@ -25,6 +25,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "defines.h"
 #include "TaskIO.h"
 #include "TaskAppCAN.h"
 #include "TaskAppSerial.h"
@@ -52,8 +53,6 @@
 osThreadId TaskIOHandle;
 osThreadId TaskAppCANHandle;
 osThreadId TaskAppSerialHandle;
-uint32_t TaskAppSerialBuffer[ 128 ];
-osStaticThreadDef_t TaskAppSerialControlBlock;
 osMessageQId QueueIOHandle;
 osMessageQId QueueAppCANHandle;
 osMessageQId QueueAppSerialHandle;
@@ -132,15 +131,15 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the queue(s) */
   /* definition and creation of QueueIO */
-  osMessageQDef(QueueIO, 16, uint16_t);
+  osMessageQDef(QueueIO, 16, sMessageType);
   QueueIOHandle = osMessageCreate(osMessageQ(QueueIO), NULL);
 
   /* definition and creation of QueueAppCAN */
-  osMessageQDef(QueueAppCAN, 16, uint16_t);
+  osMessageQDef(QueueAppCAN, 16, sMessageType);
   QueueAppCANHandle = osMessageCreate(osMessageQ(QueueAppCAN), NULL);
 
   /* definition and creation of QueueAppSerial */
-  osMessageQDef(QueueAppSerial, 16, uint16_t);
+  osMessageQDef(QueueAppSerial, 16, sMessageType);
   QueueAppSerialHandle = osMessageCreate(osMessageQ(QueueAppSerial), NULL);
 
   /* USER CODE BEGIN RTOS_QUEUES */
@@ -158,7 +157,7 @@ void MX_FREERTOS_Init(void) {
   TaskAppCANHandle = osThreadCreate(osThread(TaskAppCAN), NULL);
 
   /* definition and creation of TaskAppSerial */
-  osThreadStaticDef(TaskAppSerial, TaskAppSerial_Init, osPriorityLow, 0, 128, TaskAppSerialBuffer, &TaskAppSerialControlBlock);
+  osThreadDef(TaskAppSerial, TaskAppSerial_Init, osPriorityIdle, 0, 128);
   TaskAppSerialHandle = osThreadCreate(osThread(TaskAppSerial), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
@@ -198,7 +197,7 @@ void TaskAppCAN_Init(void const * argument)
 {
   /* USER CODE BEGIN TaskAppCAN_Init */
   /* Infinite loop */
-  TaskAppCAN_Entry(&QueueAppCANHandle,NULL);
+  TaskAppCAN_Entry(QueueAppCANHandle,NULL);
   for(;;)
   {
     osDelay(1);
@@ -218,7 +217,7 @@ void TaskAppSerial_Init(void const * argument)
 {
   /* USER CODE BEGIN TaskAppSerial_Init */
   /* Infinite loop */
-  TaskAppSerial_Entry(&QueueAppSerialHandle,NULL);
+  TaskAppSerial_Entry(QueueAppSerialHandle,NULL);
   for(;;)
   {
     osDelay(1);

@@ -15,7 +15,9 @@
 #include "cmsis_os.h"
 #include "defines.h"
 #include <string.h>
-void TaskAppCAN_Entry(QueueHandle_t *xQueue,TimerHandle_t xTimer);
+
+
+void TaskAppCAN_Entry(QueueHandle_t xQueue,TimerHandle_t xTimer);
 unsigned char TaskAppCAN_Start(sMessageType *psMessage);
 unsigned char TaskAppCAN_ReceiveEvent(sMessageType *psMessage);
 unsigned char TaskAppCAN_TransmitEvent(sMessageType *psMessage);

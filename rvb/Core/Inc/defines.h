@@ -22,6 +22,8 @@
 #define TASK_IO_1_SECOND			(unsigned long)(1000/TASK_IO_TIMEOUT)
 #define TASK_APPCAN_1_SECOND		(unsigned long)(1000/TASK_APPCAN_TIMEOUT)
 
+
+
 /* Events*/
 #define EVENT_IO_LED_INIT 	        (unsigned char)0
 #define EVENT_IO_LED_ON	 	        (unsigned char)1
@@ -57,9 +59,9 @@
 #define TIMER_IO_FLASHING			(unsigned char)0
 #define TIMER_APPCAN_FLASHING		(unsigned char)0
 /* Installed sources*/
-#define SRC_IO     		1
+#define SRC_IO     		0
 #define SRC_APPCAN   	1
-#define SRC_APPSERIAL  	1
+#define SRC_APPSERIAL  	2
 
 
 

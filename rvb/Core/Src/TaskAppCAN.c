@@ -8,8 +8,9 @@
 extern void vTimerCallbackAppCAN(void const * argument);
 sMessageType stAppCANMsg;
 static unsigned char ucCurrentStateAppCAN = TASK_APPCAN_INITIALIZING;
-static QueueHandle_t *xQueueAppCAN;
+static QueueHandle_t xQueueAppCAN;
 static TimerHandle_t xTimerAppCAN;
+static QueueHandle_t *lQueueAppSerial;
 
 static CAN_HandleTypeDef *hCAN;
 static CAN_RxHeaderTypeDef pRxHeader;
@@ -35,7 +36,7 @@ static uint32_t u32TxMailbox = 0xFFFFFFFF;
 //
 //
 //////////////////////////////////////////////
-void TaskAppCAN_Entry(QueueHandle_t *xQueue,TimerHandle_t xTimer)
+void TaskAppCAN_Entry(QueueHandle_t xQueue,TimerHandle_t xTimer)
 {
     xQueueAppCAN = xQueue;
     xTimerAppCAN = xTimer;
@@ -45,7 +46,7 @@ void TaskAppCAN_Entry(QueueHandle_t *xQueue,TimerHandle_t xTimer)
     stAppCANMsg.ucSrc = SRC_APPCAN;
     stAppCANMsg.ucDest = SRC_APPCAN;
     stAppCANMsg.ucEvent = EVENT_APPCAN_INIT;
-    xQueueGenericSend(*xQueueAppCAN, ( void * )&stAppCANMsg, 0,0);
+    xQueueGenericSend(xQueueAppCAN, ( void * )&stAppCANMsg, 0,0);
 }
 //////////////////////////////////////////////
 //
@@ -60,7 +61,7 @@ unsigned char TaskAppCAN_Start(sMessageType *psMessage)
 
     (void)stHAL_CAN_FilterConfig();
     (void)HAL_CAN_Start(hCAN);
-
+    lQueueAppSerial  = TaskAppSerial_getQueue();
 	return boError;
 }
 
@@ -88,11 +89,12 @@ unsigned char TaskAppCAN_ReceiveEvent(sMessageType *psMessage)
 //
 //
 //////////////////////////////////////////////
+uint8_t u8String[24] = "DANILO MARTINS FRANCO\r\n";
+
 unsigned char TaskAppCAN_TransmitEvent(sMessageType *psMessage)
 {
     unsigned char boError = true;
     uint32_t u32;
-
 
     pTxHeader.StdId = 0x3C0;
     pTxHeader.IDE = CAN_ID_STD;
@@ -111,6 +113,15 @@ unsigned char TaskAppCAN_TransmitEvent(sMessageType *psMessage)
     {
         (void)HAL_CAN_AddTxMessage(hCAN, &pTxHeader,stFrameTxCAN[u8FifoTxCAN].u8Data, &u32TxMailbox);
     }
+
+    stAppCANMsg.ucSrc = SRC_APPCAN;
+    stAppCANMsg.ucDest = SRC_APPSERIAL;
+    stAppCANMsg.ucEvent = EVENT_APPSERIAL_TX;
+
+    stAppCANMsg.pcMessageData = &u8String[0];
+
+    xQueueGenericSend(lQueueAppSerial, &stAppCANMsg, 0,0);
+
 	return boError;
 }
 
@@ -173,7 +184,7 @@ static uint8_t u8TogglePin = 0;
 
 void vTaskAppCAN(void const * argument)
 {
-	if( xQueueReceive( *xQueueAppCAN, &stAppCANMsg, 0 ) )
+	if( xQueueReceive(xQueueAppCAN, &stAppCANMsg, 0 ) )
 	{
 		(void)eEventHandler ((unsigned char)SRC_APPCAN,gpasTaskAppCAN_StateMachine[ucCurrentStateAppCAN], &ucCurrentStateAppCAN, &stAppCANMsg);
 	}
@@ -189,7 +200,7 @@ void vTaskAppCAN(void const * argument)
 			stFrameRxCAN[u8FifoRxCAN].u32ID = pRxHeader.StdId;
 			stFrameRxCAN[u8FifoRxCAN].u32DLC = pRxHeader.DLC;
 			stAppCANMsg.pcMessageData = (char*)&stFrameRxCAN[u8FifoRxCAN];
-			xQueueGenericSend(*xQueueAppCAN, ( void * )&stAppCANMsg, 0,0);
+			xQueueGenericSend(xQueueAppCAN, ( void * )&stAppCANMsg, 0,0);
 			if(++u8FifoRxCAN >= FIFO_SIZE)
 			{
 				u8FifoRxCAN = 0;
@@ -197,7 +208,7 @@ void vTaskAppCAN(void const * argument)
 		}
 	}
 
-	if(++u16TimeSlice >= 100)
+	if(++u16TimeSlice >= 1000)
 	{
 		if(u8TogglePin)
 		{
@@ -213,7 +224,7 @@ void vTaskAppCAN(void const * argument)
 		stAppCANMsg.ucDest = SRC_APPCAN;
 		stAppCANMsg.ucEvent = EVENT_APPCAN_TX;
 		stAppCANMsg.pcMessageData = NULL;
-		xQueueGenericSend(*xQueueAppCAN, ( void * )&stAppCANMsg, 0,0);
+		xQueueGenericSend(xQueueAppCAN, ( void * )&stAppCANMsg, 0,0);
 		if(++u8FifoTxCAN >= FIFO_SIZE)
 		{
 			u8FifoTxCAN = 0;

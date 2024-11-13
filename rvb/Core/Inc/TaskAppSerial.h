@@ -16,13 +16,15 @@
 #include "cmsis_os.h"
 #include "defines.h"
 #include <string.h>
-void TaskAppSerial_Entry(QueueHandle_t *xQueue,TimerHandle_t xTimer);
+
+
+void TaskAppSerial_Entry(QueueHandle_t xQueue,TimerHandle_t xTimer);
 unsigned char TaskAppSerial_Start(sMessageType *psMessage);
 unsigned char TaskAppSerial_ReceiveEvent(sMessageType *psMessage);
 unsigned char TaskAppSerial_TransmitEvent(sMessageType *psMessage);
 unsigned char TaskAppSerial_IgnoreEvent(sMessageType *psMessage);
 void vLocalTimerCallbackAppSerial(void const * argument);
 void vTaskAppSerial(void const * argument);
-
+QueueHandle_t *TaskAppSerial_getQueue(void);
 
 #endif /* INC_TASKAPPSERIAL_H_ */

@@ -6,10 +6,14 @@
  */
 #include "TaskAppSerial.h"
 extern void vTimerCallbackAppSerial(void const * argument);
-sMessageType stAppSerialMsg;
+
 static unsigned char ucCurrentStateAppSerial = TASK_APPSERIAL_INITIALIZING;
-static QueueHandle_t *xQueueAppSerial;
+static QueueHandle_t xQueueAppSerial;
 static TimerHandle_t xTimerAppSerial;
+
+
+static sMessageType stAppSerialMsg;
+
 static UART_HandleTypeDef *hUSART;
 
 #define FIFO_SIZE 8
@@ -23,11 +27,24 @@ static uint16_t u16TimeSlice = 0;
 //////////////////////////////////////////////
 //
 //
+//              TaskAppSerial_getQueue
+//
+//
+//////////////////////////////////////////////
+QueueHandle_t *TaskAppSerial_getQueue()
+{
+	return xQueueAppSerial;
+}
+
+//////////////////////////////////////////////
+//
+//
 //              TaskAppSerial_Entry
 //
 //
 //////////////////////////////////////////////
-void TaskAppSerial_Entry(QueueHandle_t *xQueue,TimerHandle_t xTimer)
+
+void TaskAppSerial_Entry(QueueHandle_t xQueue,TimerHandle_t xTimer)
 {
     xQueueAppSerial = xQueue;
     xTimerAppSerial = xTimer;
@@ -37,7 +54,7 @@ void TaskAppSerial_Entry(QueueHandle_t *xQueue,TimerHandle_t xTimer)
     stAppSerialMsg.ucSrc = SRC_APPSERIAL;
     stAppSerialMsg.ucDest = SRC_APPSERIAL;
     stAppSerialMsg.ucEvent = EVENT_APPSERIAL_INIT;
-    xQueueGenericSend(*xQueueAppSerial, ( void * )&stAppSerialMsg, 0,0);
+    xQueueGenericSend(xQueueAppSerial, ( void * )&stAppSerialMsg, 0,0);
 }
 //////////////////////////////////////////////
 //
@@ -49,7 +66,6 @@ void TaskAppSerial_Entry(QueueHandle_t *xQueue,TimerHandle_t xTimer)
 unsigned char TaskAppSerial_Start(sMessageType *psMessage)
 {
     unsigned char boError = true;
-
 
 	return boError;
 }
@@ -65,8 +81,6 @@ unsigned char TaskAppSerial_Start(sMessageType *psMessage)
 unsigned char TaskAppSerial_ReceiveEvent(sMessageType *psMessage)
 {
     unsigned char boError = true;
-
-
 	return boError;
 }
 
@@ -81,11 +95,11 @@ unsigned char TaskAppSerial_TransmitEvent(sMessageType *psMessage)
 {
     unsigned char boError = true;
 
-    uint8_t u8String[] = "Danilo Franco";
+    /*uint8_t u8String[] = "Danilo Franco\r\n";*/
 
-    memcpy(u8FrameTxUSART,u8String,sizeof(u8String));
+    memcpy(u8FrameTxUSART,psMessage->pcMessageData,strlen(psMessage->pcMessageData));
 
-    (void)HAL_UART_Transmit(hUSART, u8FrameTxUSART, sizeof(u8String),10);
+    (void)HAL_UART_Transmit(hUSART, u8FrameTxUSART, strlen(psMessage->pcMessageData),10);
 
 	return boError;
 }
@@ -147,12 +161,12 @@ static sStateMachineType const * const gpasTaskAppSerial_StateMachine[] =
 
 void vTaskAppSerial(void const * argument)
 {
-	if( xQueueReceive( *xQueueAppSerial, &stAppSerialMsg, 0 ) )
+	if( xQueueReceive(xQueueAppSerial, &stAppSerialMsg, 0 ) )
 	{
 		(void)eEventHandler ((unsigned char)SRC_APPSERIAL,gpasTaskAppSerial_StateMachine[ucCurrentStateAppSerial], &ucCurrentStateAppSerial, &stAppSerialMsg);
 	}
 
-	memset(u8FrameRxUSART,0,sizeof(u8FrameRxUSART));
+	/*memset(u8FrameRxUSART,0,sizeof(u8FrameRxUSART));
 	if(HAL_UART_Receive(hUSART, u8FrameRxUSART, sizeof(u8FrameRxUSART),0) == HAL_OK)
 	{
 		stAppSerialMsg.ucSrc = SRC_APPSERIAL;
@@ -160,17 +174,17 @@ void vTaskAppSerial(void const * argument)
 		stAppSerialMsg.ucEvent = EVENT_APPSERIAL_RX;
 		stAppSerialMsg.pcMessageData = (char*)&u8FrameRxUSART;
 		xQueueGenericSend(*xQueueAppSerial, ( void * )&stAppSerialMsg, 0,0);
-	}
+	}*/
 
-	if(++u16TimeSlice >= 1000)
+	/*if(++u16TimeSlice >= 1000)
 	{
 		stAppSerialMsg.ucSrc = SRC_APPSERIAL;
 		stAppSerialMsg.ucDest = SRC_APPSERIAL;
 		stAppSerialMsg.ucEvent = EVENT_APPSERIAL_TX;
 		stAppSerialMsg.pcMessageData = NULL;
-		xQueueGenericSend(*xQueueAppSerial, ( void * )&stAppSerialMsg, 0,0);
+		xQueueGenericSend(xQueueAppSerial, ( void * )&stAppSerialMsg, 0,0);
 		u16TimeSlice = 0;
-	}
+	}*/
 }
 
 
