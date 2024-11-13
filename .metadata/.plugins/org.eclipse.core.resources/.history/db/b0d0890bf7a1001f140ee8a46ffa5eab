@@ -62,7 +62,7 @@ unsigned char TaskAppCAN_Start(sMessageType *psMessage)
     (void)stHAL_CAN_FilterConfig();
     (void)HAL_CAN_Start(hCAN);
     pstQueueAppSerial  = TaskAppSerial_getQueue();
-    pu8SerialTxBuffer  = TaskAppSerial_getTxBuffer();
+    pu8SerialTxBuffer  = (uint8_t)TaskAppSerial_getTxBuffer();
 	return boError;
 }
 

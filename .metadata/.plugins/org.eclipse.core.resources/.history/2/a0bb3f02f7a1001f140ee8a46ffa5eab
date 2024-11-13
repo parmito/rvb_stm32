@@ -16,7 +16,6 @@
 #include "defines.h"
 #include <string.h>
 
-#include "TaskAppSerial.h"
 
 void TaskAppCAN_Entry(QueueHandle_t xQueue,TimerHandle_t xTimer);
 unsigned char TaskAppCAN_Start(sMessageType *psMessage);

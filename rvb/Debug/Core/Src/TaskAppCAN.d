@@ -44,7 +44,8 @@ Core/Src/TaskAppCAN.o: ../Core/Src/TaskAppCAN.c ../Core/Inc/TaskAppCAN.h \
  /home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
  /home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  /home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
- /home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+ /home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
+ ../Core/Inc/TaskAppSerial.h ../Core/Inc/usart.h
 ../Core/Inc/TaskAppCAN.h:
 /home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
@@ -94,3 +95,5 @@ Core/Src/TaskAppCAN.o: ../Core/Src/TaskAppCAN.c ../Core/Inc/TaskAppCAN.h \
 /home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 /home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h:
 /home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
+../Core/Inc/TaskAppSerial.h:
+../Core/Inc/usart.h:
