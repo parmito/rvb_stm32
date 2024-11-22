@@ -38,17 +38,17 @@ void MX_CAN_Init(void)
 
   /* USER CODE END CAN_Init 1 */
   hcan.Instance = CAN1;
-  hcan.Init.Prescaler = 8;
-  hcan.Init.Mode = CAN_MODE_LOOPBACK;
-  hcan.Init.SyncJumpWidth = CAN_SJW_1TQ;
-  hcan.Init.TimeSeg1 = CAN_BS1_7TQ;
-  hcan.Init.TimeSeg2 = CAN_BS2_1TQ;
+  hcan.Init.Prescaler = 4;
+  hcan.Init.Mode = CAN_MODE_NORMAL;
+  hcan.Init.SyncJumpWidth = CAN_SJW_4TQ;
+  hcan.Init.TimeSeg1 = CAN_BS1_9TQ;
+  hcan.Init.TimeSeg2 = CAN_BS2_8TQ;
   hcan.Init.TimeTriggeredMode = ENABLE;
   hcan.Init.AutoBusOff = ENABLE;
   hcan.Init.AutoWakeUp = ENABLE;
-  hcan.Init.AutoRetransmission = ENABLE;
+  hcan.Init.AutoRetransmission = DISABLE;
   hcan.Init.ReceiveFifoLocked = DISABLE;
-  hcan.Init.TransmitFifoPriority = ENABLE;
+  hcan.Init.TransmitFifoPriority = DISABLE;
   if (HAL_CAN_Init(&hcan) != HAL_OK)
   {
     Error_Handler();
@@ -89,7 +89,8 @@ void HAL_CAN_MspInit(CAN_HandleTypeDef* canHandle)
     __HAL_AFIO_REMAP_CAN1_2();
 
   /* USER CODE BEGIN CAN1_MspInit 1 */
-
+    HAL_NVIC_SetPriority(USB_LP_CAN1_RX0_IRQn, 5, 0);
+    /*HAL_NVIC_EnableIRQ(USB_LP_CAN1_RX0_IRQn);  */
   /* USER CODE END CAN1_MspInit 1 */
   }
 }
@@ -127,22 +128,27 @@ HAL_StatusTypeDef stHAL_CAN_FilterConfig(void)
 {
 	CAN_FilterTypeDef sFilterConfig0 =
 	{	.FilterActivation = CAN_FILTER_ENABLE,
-			.FilterIdHigh = 0x03C0<<5,
+			/*.FilterIdHigh = 0x03C0<<5,
 			.FilterMaskIdHigh = 0x03C0<<5,
+
 			.FilterIdLow = 0x00B5<<5,
-			.FilterMaskIdLow = 0x00B5<<5,
+			.FilterMaskIdLow = 0x00B5<<5,*/
+
+			.FilterIdHigh = 0x00000000,
+			.FilterMaskIdHigh = 0x00000000,
+
+			.FilterIdLow = 0x00000000,
+			.FilterMaskIdLow = 0x00000000,
 			.FilterFIFOAssignment = CAN_FILTER_FIFO0,
 			.FilterBank = 0,
-			.FilterMode =  CAN_FILTERMODE_IDLIST,
-			.FilterScale = CAN_FILTERSCALE_16BIT,
-			.SlaveStartFilterBank  = 0
+			.FilterMode =  /*CAN_FILTERMODE_IDLIST*/CAN_FILTERMODE_IDMASK,
+			.FilterScale = CAN_FILTERSCALE_32BIT,
+			.SlaveStartFilterBank  = 14
 	};
 
 	HAL_CAN_ConfigFilter(&hcan, &sFilterConfig0);
 
 	return HAL_OK;
 }
-
-
 
 /* USER CODE END 1 */

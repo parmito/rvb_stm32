@@ -2,6 +2,7 @@
 #define _DEFINES_H
 
 #include "stdint.h"
+#include "stdlib.h"
 #ifdef __cplusplus
  extern "C" {
 #endif
@@ -22,7 +23,7 @@
 #define TASK_IO_1_SECOND			(unsigned long)(1000/TASK_IO_TIMEOUT)
 #define TASK_APPCAN_1_SECOND		(unsigned long)(1000/TASK_APPCAN_TIMEOUT)
 
-
+#define FIFO_SIZE 8
 
 /* Events*/
 #define EVENT_IO_LED_INIT 	        (unsigned char)0
