@@ -177,7 +177,7 @@ void TaskIO_Init(void const * argument)
 {
   /* USER CODE BEGIN TaskIO_Init */
   /* Infinite loop */
-  TaskIO_Entry(&QueueIOHandle,TimerIOHandle);
+  TaskIO_Entry(QueueIOHandle,TimerIOHandle);
   for(;;)
   {
     osDelay(50);

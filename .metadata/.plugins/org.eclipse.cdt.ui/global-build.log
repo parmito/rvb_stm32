@@ -2478,3 +2478,560 @@ arm-none-eabi-size  rvb.elf
   27384	     96	   8272	  35752	   8ba8	rvb.elf
 Finished building: default.size.stdout
  
+16:01:33 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_ReceiveEvent':
+../Core/Src/TaskAppCAN.c:104:44: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  104 |     sprintf((char*)&u8SerialTxBuffer[0],"%8X    ",(uint32_t)pstFrameCAN->u32DID);
+      |                                          ~~^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                            |      |
+      |                                            |      long unsigned int
+      |                                            unsigned int
+      |                                          %8lX
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  27400	     96	   8272	  35768	   8bb8	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+16:01:38 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27400	     96	   8272	  35768	   8bb8	rvb.elf
+Finished building: default.size.stdout
+ 
+16:02:59 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_ReceiveEvent':
+../Core/Src/TaskAppCAN.c:104:44: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  104 |     sprintf((char*)&u8SerialTxBuffer[0],"%8X    ",(uint32_t)pstFrameCAN->u32DID);
+      |                                          ~~^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                            |      |
+      |                                            |      long unsigned int
+      |                                            unsigned int
+      |                                          %8lX
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  27400	     96	   8272	  35768	   8bb8	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+16:03:33 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27400	     96	   8272	  35768	   8bb8	rvb.elf
+Finished building: default.size.stdout
+ 
+16:03:45 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27400	     96	   8272	  35768	   8bb8	rvb.elf
+Finished building: default.size.stdout
+ 
+16:03:59 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27400	     96	   8272	  35768	   8bb8	rvb.elf
+Finished building: default.size.stdout
+ 
+16:04:02 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27400	     96	   8272	  35768	   8bb8	rvb.elf
+Finished building: default.size.stdout
+ 
+08:52:30 **** Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27400	     96	   8272	  35768	   8bb8	rvb.elf
+Finished building: default.size.stdout
+ 
+08:52:36 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27400	     96	   8272	  35768	   8bb8	rvb.elf
+Finished building: default.size.stdout
+ 
+09:30:39 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+arm-none-eabi-gcc "../Core/Src/TaskAppSerial.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppSerial.d" -MT"Core/Src/TaskAppSerial.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppSerial.o"
+arm-none-eabi-gcc "../Core/Src/TaskIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskIO.d" -MT"Core/Src/TaskIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskIO.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/state.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/state.d" -MT"Core/Src/state.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state.o"
+../Core/Src/TaskIO.c: In function 'TaskIO_Entry':
+../Core/Src/TaskIO.c:43:14: warning: assignment to 'QueueHandle_t' {aka 'struct QueueDefinition *'} from incompatible pointer type 'struct QueueDefinition **' [-Wincompatible-pointer-types]
+   43 |     xQueueIO = xQueue;
+      |              ^
+../Core/Src/TaskIO.c: At top level:
+../Core/Src/TaskIO.c:206:5: error: expected '}' before '{' token
+  206 |     {EVENT_IO_LED_NULL,       TaskIO_IgnoreEvent,               TASKIO_IO_RUNNING,                              TASKIO_IO_RUNNING               }
+      |     ^
+../Core/Src/TaskIO.c:202:1: note: to match this '{'
+  202 | {
+      | ^
+../Core/Src/TaskAppSerial.c: In function 'TaskAppSerial_getTxBuffer':
+../Core/Src/TaskAppSerial.c:51:1: warning: control reaches end of non-void function [-Wreturn-type]
+   51 | }
+      | ^
+make: *** [Core/Src/subdir.mk:58: Core/Src/TaskIO.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:76:18: warning: implicit declaration of function 'TaskIO_getQueue' [-Wimplicit-function-declaration]
+   76 |     pstQueueIO = TaskIO_getQueue();
+      |                  ^~~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:76:16: warning: assignment to 'struct QueueDefinition **' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   76 |     pstQueueIO = TaskIO_getQueue();
+      |                ^
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_ReceiveEvent':
+../Core/Src/TaskAppCAN.c:106:44: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  106 |     sprintf((char*)&u8SerialTxBuffer[0],"%8X    ",(uint32_t)pstFrameCAN->u32DID);
+      |                                          ~~^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                            |      |
+      |                                            |      long unsigned int
+      |                                            unsigned int
+      |                                          %8lX
+../Core/Src/TaskAppCAN.c: At top level:
+../Core/Src/TaskAppCAN.c:243:6: error: 'EVENT_APPCAN_PS' undeclared here (not in a function); did you mean 'EVENT_APPCAN_TX'?
+  243 |     {EVENT_APPCAN_PS,           TaskAppCAN_PSEvent,                     TASK_APPCAN_PS,                                 TASK_APPCAN_RUNNING             },
+      |      ^~~~~~~~~~~~~~~
+      |      EVENT_APPCAN_TX
+make: *** [Core/Src/subdir.mk:58: Core/Src/TaskAppCAN.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+09:31:24 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+arm-none-eabi-gcc "../Core/Src/TaskAppSerial.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppSerial.d" -MT"Core/Src/TaskAppSerial.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppSerial.o"
+arm-none-eabi-gcc "../Core/Src/TaskIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskIO.d" -MT"Core/Src/TaskIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskIO.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/state.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/state.d" -MT"Core/Src/state.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state.o"
+../Core/Src/TaskIO.c: In function 'TaskIO_Entry':
+../Core/Src/TaskIO.c:43:14: warning: assignment to 'QueueHandle_t' {aka 'struct QueueDefinition *'} from incompatible pointer type 'struct QueueDefinition **' [-Wincompatible-pointer-types]
+   43 |     xQueueIO = xQueue;
+      |              ^
+../Core/Src/TaskIO.c: At top level:
+../Core/Src/TaskIO.c:206:5: error: expected '}' before '{' token
+  206 |     {EVENT_IO_LED_NULL,       TaskIO_IgnoreEvent,               TASKIO_IO_RUNNING,                              TASKIO_IO_RUNNING               }
+      |     ^
+../Core/Src/TaskIO.c:202:1: note: to match this '{'
+  202 | {
+      | ^
+../Core/Src/TaskAppSerial.c: In function 'TaskAppSerial_getTxBuffer':
+../Core/Src/TaskAppSerial.c:51:1: warning: control reaches end of non-void function [-Wreturn-type]
+   51 | }
+      | ^
+make: *** [Core/Src/subdir.mk:58: Core/Src/TaskIO.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:76:18: warning: implicit declaration of function 'TaskIO_getQueue' [-Wimplicit-function-declaration]
+   76 |     pstQueueIO = TaskIO_getQueue();
+      |                  ^~~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:76:16: warning: assignment to 'struct QueueDefinition **' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   76 |     pstQueueIO = TaskIO_getQueue();
+      |                ^
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_ReceiveEvent':
+../Core/Src/TaskAppCAN.c:106:44: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  106 |     sprintf((char*)&u8SerialTxBuffer[0],"%8X    ",(uint32_t)pstFrameCAN->u32DID);
+      |                                          ~~^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                            |      |
+      |                                            |      long unsigned int
+      |                                            unsigned int
+      |                                          %8lX
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+09:31:38 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskIO.d" -MT"Core/Src/TaskIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskIO.o"
+../Core/Src/TaskIO.c: In function 'TaskIO_Entry':
+../Core/Src/TaskIO.c:43:14: warning: assignment to 'QueueHandle_t' {aka 'struct QueueDefinition *'} from incompatible pointer type 'struct QueueDefinition **' [-Wincompatible-pointer-types]
+   43 |     xQueueIO = xQueue;
+      |              ^
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  26736	     96	   8280	  35112	   8928	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:32:25 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:76:18: warning: implicit declaration of function 'TaskIO_getQueue' [-Wimplicit-function-declaration]
+   76 |     pstQueueIO = TaskIO_getQueue();
+      |                  ^~~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:76:16: warning: assignment to 'struct QueueDefinition **' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   76 |     pstQueueIO = TaskIO_getQueue();
+      |                ^
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_ReceiveEvent':
+../Core/Src/TaskAppCAN.c:106:44: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  106 |     sprintf((char*)&u8SerialTxBuffer[0],"%8X    ",(uint32_t)pstFrameCAN->u32DID);
+      |                                          ~~^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                            |      |
+      |                                            |      long unsigned int
+      |                                            unsigned int
+      |                                          %8lX
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  26768	     96	   8280	  35144	   8948	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:32:48 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:76:18: warning: implicit declaration of function 'TaskIO_getQueue' [-Wimplicit-function-declaration]
+   76 |     pstQueueIO = TaskIO_getQueue();
+      |                  ^~~~~~~~~~~~~~~
+../Core/Src/TaskAppCAN.c:76:16: warning: assignment to 'struct QueueDefinition **' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   76 |     pstQueueIO = TaskIO_getQueue();
+      |                ^
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_ReceiveEvent':
+../Core/Src/TaskAppCAN.c:106:44: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  106 |     sprintf((char*)&u8SerialTxBuffer[0],"%8X    ",(uint32_t)pstFrameCAN->u32DID);
+      |                                          ~~^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                            |      |
+      |                                            |      long unsigned int
+      |                                            unsigned int
+      |                                          %8lX
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  26768	     96	   8280	  35144	   8948	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:34:17 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskIO.d" -MT"Core/Src/TaskIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskIO.o"
+../Core/Src/TaskIO.c: In function 'TaskIO_Entry':
+../Core/Src/TaskIO.c:43:14: warning: assignment to 'QueueHandle_t' {aka 'struct QueueDefinition *'} from incompatible pointer type 'struct QueueDefinition **' [-Wincompatible-pointer-types]
+   43 |     xQueueIO = xQueue;
+      |              ^
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  26912	     96	   8280	  35288	   89d8	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:34:22 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26912	     96	   8280	  35288	   89d8	rvb.elf
+Finished building: default.size.stdout
+ 
+09:35:39 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26912	     96	   8280	  35288	   89d8	rvb.elf
+Finished building: default.size.stdout
+ 
+09:35:48 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26912	     96	   8280	  35288	   89d8	rvb.elf
+Finished building: default.size.stdout
+ 
+09:38:29 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskIO.d" -MT"Core/Src/TaskIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskIO.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/freertos.o"
+../Core/Src/TaskIO.c: In function 'TaskIO_Entry':
+../Core/Src/TaskIO.c:43:14: warning: assignment to 'QueueHandle_t' {aka 'struct QueueDefinition *'} from incompatible pointer type 'struct QueueDefinition **' [-Wincompatible-pointer-types]
+   43 |     xQueueIO = xQueue;
+      |              ^
+../Core/Src/freertos.c: In function 'TaskIO_Init':
+../Core/Src/freertos.c:180:16: warning: passing argument 1 of 'TaskIO_Entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  180 |   TaskIO_Entry(QueueIOHandle,TimerIOHandle);
+      |                ^~~~~~~~~~~~~
+      |                |
+      |                osMessageQId {aka struct QueueDefinition *}
+In file included from ../Core/Src/freertos.c:29:
+../Core/Inc/TaskIO.h:17:34: note: expected 'struct QueueDefinition **' but argument is of type 'osMessageQId' {aka 'struct QueueDefinition *'}
+   17 | void TaskIO_Entry(QueueHandle_t *xQueue,TimerHandle_t xTimer);
+      |                   ~~~~~~~~~~~~~~~^~~~~~
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  26912	     96	   8280	  35288	   89d8	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:38:31 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26912	     96	   8280	  35288	   89d8	rvb.elf
+Finished building: default.size.stdout
+ 
+09:38:35 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26912	     96	   8280	  35288	   89d8	rvb.elf
+Finished building: default.size.stdout
+ 
+09:48:53 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+arm-none-eabi-gcc "../Core/Src/TaskIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskIO.d" -MT"Core/Src/TaskIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskIO.o"
+../Core/Src/TaskIO.c: In function 'TaskIO_Entry':
+../Core/Src/TaskIO.c:45:14: warning: assignment to 'QueueHandle_t' {aka 'struct QueueDefinition *'} from incompatible pointer type 'struct QueueDefinition **' [-Wincompatible-pointer-types]
+   45 |     xQueueIO = xQueue;
+      |              ^
+../Core/Src/TaskIO.c: In function 'TaskIO_Start':
+../Core/Src/TaskIO.c:64:23: warning: implicit declaration of function 'TaskAppCAN_getQueue'; did you mean 'TaskIO_getQueue'? [-Wimplicit-function-declaration]
+   64 |     pstQueueAppCAN  = TaskAppCAN_getQueue();
+      |                       ^~~~~~~~~~~~~~~~~~~
+      |                       TaskIO_getQueue
+../Core/Src/TaskIO.c:64:21: warning: assignment to 'struct QueueDefinition **' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   64 |     pstQueueAppCAN  = TaskAppCAN_getQueue();
+      |                     ^
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:89:18: warning: implicit declaration of function 'TaskIO_getQueue'; did you mean 'TaskAppCAN_getQueue'? [-Wimplicit-function-declaration]
+   89 |     pstQueueIO = TaskIO_getQueue();
+      |                  ^~~~~~~~~~~~~~~
+      |                  TaskAppCAN_getQueue
+../Core/Src/TaskAppCAN.c:89:16: warning: assignment to 'struct QueueDefinition **' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   89 |     pstQueueIO = TaskIO_getQueue();
+      |                ^
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_ReceiveEvent':
+../Core/Src/TaskAppCAN.c:119:44: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  119 |     sprintf((char*)&u8SerialTxBuffer[0],"%8X    ",(uint32_t)pstFrameCAN->u32DID);
+      |                                          ~~^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                            |      |
+      |                                            |      long unsigned int
+      |                                            unsigned int
+      |                                          %8lX
+../Core/Src/TaskAppCAN.c: At top level:
+../Core/Src/TaskAppCAN.c:289:5: error: expected '}' before '{' token
+  289 |     {EVENT_APPCAN_NULL,         TaskAppCAN_IgnoreEvent,         TASK_APPCAN_PS,                         TASK_APPCAN_PS                  }
+      |     ^
+../Core/Src/TaskAppCAN.c:285:1: note: to match this '{'
+  285 | {
+      | ^
+make: *** [Core/Src/subdir.mk:58: Core/Src/TaskAppCAN.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+09:49:03 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:89:18: warning: implicit declaration of function 'TaskIO_getQueue'; did you mean 'TaskAppCAN_getQueue'? [-Wimplicit-function-declaration]
+   89 |     pstQueueIO = TaskIO_getQueue();
+      |                  ^~~~~~~~~~~~~~~
+      |                  TaskAppCAN_getQueue
+../Core/Src/TaskAppCAN.c:89:16: warning: assignment to 'struct QueueDefinition **' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   89 |     pstQueueIO = TaskIO_getQueue();
+      |                ^
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_ReceiveEvent':
+../Core/Src/TaskAppCAN.c:119:44: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  119 |     sprintf((char*)&u8SerialTxBuffer[0],"%8X    ",(uint32_t)pstFrameCAN->u32DID);
+      |                                          ~~^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                            |      |
+      |                                            |      long unsigned int
+      |                                            unsigned int
+      |                                          %8lX
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  27884	     96	   8280	  36260	   8da4	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:49:34 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:89:18: warning: implicit declaration of function 'TaskIO_getQueue'; did you mean 'TaskAppCAN_getQueue'? [-Wimplicit-function-declaration]
+   89 |     pstQueueIO = TaskIO_getQueue();
+      |                  ^~~~~~~~~~~~~~~
+      |                  TaskAppCAN_getQueue
+../Core/Src/TaskAppCAN.c:89:16: warning: assignment to 'struct QueueDefinition **' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   89 |     pstQueueIO = TaskIO_getQueue();
+      |                ^
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_ReceiveEvent':
+../Core/Src/TaskAppCAN.c:119:44: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  119 |     sprintf((char*)&u8SerialTxBuffer[0],"%8X    ",(uint32_t)pstFrameCAN->u32DID);
+      |                                          ~~^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                            |      |
+      |                                            |      long unsigned int
+      |                                            unsigned int
+      |                                          %8lX
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  27884	     96	   8280	  36260	   8da4	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:49:38 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27884	     96	   8280	  36260	   8da4	rvb.elf
+Finished building: default.size.stdout
+ 
+09:54:16 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+arm-none-eabi-gcc "../Core/Src/TaskAppSerial.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppSerial.d" -MT"Core/Src/TaskAppSerial.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppSerial.o"
+arm-none-eabi-gcc "../Core/Src/TaskIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskIO.d" -MT"Core/Src/TaskIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskIO.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/state.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/state.d" -MT"Core/Src/state.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/state.o"
+../Core/Src/TaskIO.c: In function 'TaskIO_Entry':
+../Core/Src/TaskIO.c:45:14: warning: assignment to 'QueueHandle_t' {aka 'struct QueueDefinition *'} from incompatible pointer type 'struct QueueDefinition **' [-Wincompatible-pointer-types]
+   45 |     xQueueIO = xQueue;
+      |              ^
+../Core/Src/freertos.c: In function 'TaskIO_Init':
+../Core/Src/freertos.c:180:16: warning: passing argument 1 of 'TaskIO_Entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  180 |   TaskIO_Entry(QueueIOHandle,TimerIOHandle);
+      |                ^~~~~~~~~~~~~
+      |                |
+      |                osMessageQId {aka struct QueueDefinition *}
+In file included from ../Core/Src/freertos.c:29:
+../Core/Inc/TaskIO.h:17:34: note: expected 'struct QueueDefinition **' but argument is of type 'osMessageQId' {aka 'struct QueueDefinition *'}
+   17 | void TaskIO_Entry(QueueHandle_t *xQueue,TimerHandle_t xTimer);
+      |                   ~~~~~~~~~~~~~~~^~~~~~
+../Core/Src/TaskIO.c: In function 'TaskIO_Start':
+../Core/Src/TaskIO.c:64:23: warning: implicit declaration of function 'TaskAppCAN_getQueue'; did you mean 'TaskIO_getQueue'? [-Wimplicit-function-declaration]
+   64 |     pstQueueAppCAN  = TaskAppCAN_getQueue();
+      |                       ^~~~~~~~~~~~~~~~~~~
+      |                       TaskIO_getQueue
+../Core/Src/TaskIO.c:64:21: warning: assignment to 'struct QueueDefinition **' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   64 |     pstQueueAppCAN  = TaskAppCAN_getQueue();
+      |                     ^
+../Core/Src/TaskAppSerial.c: In function 'TaskAppSerial_getTxBuffer':
+../Core/Src/TaskAppSerial.c:51:1: warning: control reaches end of non-void function [-Wreturn-type]
+   51 | }
+      | ^
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:104:18: warning: implicit declaration of function 'TaskIO_getQueue'; did you mean 'TaskAppCAN_getQueue'? [-Wimplicit-function-declaration]
+  104 |     pstQueueIO = TaskIO_getQueue();
+      |                  ^~~~~~~~~~~~~~~
+      |                  TaskAppCAN_getQueue
+../Core/Src/TaskAppCAN.c:104:16: warning: assignment to 'struct QueueDefinition **' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  104 |     pstQueueIO = TaskIO_getQueue();
+      |                ^
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_ReceiveEvent':
+../Core/Src/TaskAppCAN.c:134:44: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  134 |     sprintf((char*)&u8SerialTxBuffer[0],"%8X    ",(uint32_t)pstFrameCAN->u32DID);
+      |                                          ~~^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                            |      |
+      |                                            |      long unsigned int
+      |                                            unsigned int
+      |                                          %8lX
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  27976	     96	   8280	  36352	   8e00	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:55:56 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27976	     96	   8280	  36352	   8e00	rvb.elf
+Finished building: default.size.stdout
+ 
+09:56:12 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27976	     96	   8280	  36352	   8e00	rvb.elf
+Finished building: default.size.stdout
+ 
+09:57:55 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-gcc "../Core/Src/TaskAppCAN.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TaskAppCAN.d" -MT"Core/Src/TaskAppCAN.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TaskAppCAN.o"
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_Start':
+../Core/Src/TaskAppCAN.c:104:18: warning: implicit declaration of function 'TaskIO_getQueue'; did you mean 'TaskAppCAN_getQueue'? [-Wimplicit-function-declaration]
+  104 |     pstQueueIO = TaskIO_getQueue();
+      |                  ^~~~~~~~~~~~~~~
+      |                  TaskAppCAN_getQueue
+../Core/Src/TaskAppCAN.c:104:16: warning: assignment to 'struct QueueDefinition **' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  104 |     pstQueueIO = TaskIO_getQueue();
+      |                ^
+../Core/Src/TaskAppCAN.c: In function 'TaskAppCAN_ReceiveEvent':
+../Core/Src/TaskAppCAN.c:134:44: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  134 |     sprintf((char*)&u8SerialTxBuffer[0],"%8X    ",(uint32_t)pstFrameCAN->u32DID);
+      |                                          ~~^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                            |      |
+      |                                            |      long unsigned int
+      |                                            unsigned int
+      |                                          %8lX
+arm-none-eabi-gcc -o "rvb.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/volkswagen2/Documentos/danilo-franco/rvb/rvb/STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rvb.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rvb.elf
+ 
+arm-none-eabi-size  rvb.elf 
+arm-none-eabi-objdump -h -S rvb.elf  > "rvb.list"
+   text	   data	    bss	    dec	    hex	filename
+  27976	     96	   8280	  36352	   8e00	rvb.elf
+Finished building: default.size.stdout
+ 
+Finished building: rvb.list
+ 
+09:57:58 **** Incremental Build of configuration Debug for project rvb ****
+make -j6 all 
+arm-none-eabi-size  rvb.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27976	     96	   8280	  36352	   8e00	rvb.elf
+Finished building: default.size.stdout
+ 

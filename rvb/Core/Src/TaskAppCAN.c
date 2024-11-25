@@ -11,6 +11,7 @@ static unsigned char ucCurrentStateAppCAN = TASK_APPCAN_INITIALIZING;
 static QueueHandle_t xQueueAppCAN;
 static TimerHandle_t xTimerAppCAN;
 static QueueHandle_t *pstQueueAppSerial;
+static QueueHandle_t *pstQueueIO;
 
 static CAN_HandleTypeDef *hCAN;
 static CAN_RxHeaderTypeDef pRxHeader;
@@ -32,11 +33,39 @@ static tstFrameCAN stFrameRxCAN[8];
 static uint8_t u8SerialTxBuffer[64];
 static uint16_t u16TimeToSleep = 0;
 
+//////////////////////////////////////////////
+//
+//
+//     HAL_CAN_RxFifo0MsgPendingCallback
+//
+//
+//////////////////////////////////////////////
+
 extern void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 {
 	HAL_NVIC_DisableIRQ(USB_LP_CAN1_RX0_IRQn);
 	HAL_ResumeTick();
+
+    stAppCANMsg.ucSrc = SRC_APPCAN;
+    stAppCANMsg.ucDest = SRC_IO;
+    stAppCANMsg.ucEvent = EVENT_IO_WAKEUP;
+    stAppCANMsg.pcMessageData = NULL;
+    xQueueGenericSendFromISR(*pstQueueIO, &stAppCANMsg, 0,0);
+
 }
+
+//////////////////////////////////////////////
+//
+//
+//              TaskAppCAN_getQueue
+//
+//
+//////////////////////////////////////////////
+QueueHandle_t *TaskAppCAN_getQueue()
+{
+	return &xQueueAppCAN;
+}
+
 
 //////////////////////////////////////////////
 //
@@ -72,6 +101,7 @@ unsigned char TaskAppCAN_Start(sMessageType *psMessage)
     (void)HAL_CAN_Start(hCAN);
 
     pstQueueAppSerial  = TaskAppSerial_getQueue();
+    pstQueueIO = TaskIO_getQueue();
     /*u16SizeSerialTxBuffer =  TaskAppSerial_getTxBuffer(&u8SerialTxBuffer);
     pu8SerialTxBuffer = &u8SerialTxBuffer;*/
 	return boError;
@@ -163,6 +193,51 @@ unsigned char TaskAppCAN_TransmitEvent(sMessageType *psMessage)
 //////////////////////////////////////////////
 //
 //
+//             TaskAppCAN_PSEvent
+//
+//
+//////////////////////////////////////////////
+unsigned char TaskAppCAN_PSEvent(sMessageType *psMessage)
+{
+    unsigned char boError = true;
+
+    stAppCANMsg.ucSrc = SRC_APPCAN;
+    stAppCANMsg.ucDest = SRC_IO;
+    stAppCANMsg.ucEvent = EVENT_IO_PS;
+    stAppCANMsg.pcMessageData = NULL;
+    xQueueGenericSend(*pstQueueIO, &stAppCANMsg, 0,0);
+
+	return boError;
+}
+
+//////////////////////////////////////////////
+//
+//
+//             TaskAppCAN_SleepEvent
+//
+//
+//////////////////////////////////////////////
+unsigned char TaskAppCAN_SleepEvent(sMessageType *psMessage)
+{
+    unsigned char boError = true;
+
+	HAL_SuspendTick();
+	/*Configure GPIO pin Output Level */
+
+	HAL_CAN_Stop(hCAN);
+	HAL_CAN_MspDeInit(hCAN);
+	HAL_CAN_MspInit(hCAN);
+    HAL_NVIC_EnableIRQ(USB_LP_CAN1_RX0_IRQn);
+	HAL_CAN_Start(hCAN);
+    HAL_CAN_ActivateNotification(hCAN, CAN_IT_RX_FIFO0_MSG_PENDING);
+    HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLEEPENTRY_WFI);
+
+	return boError;
+}
+
+//////////////////////////////////////////////
+//
+//
 //              TaskAppCAN_IgnoreEvent
 //
 //
@@ -206,13 +281,26 @@ static sStateMachineType const gasTaskAppCAN_Running[] =
     /*  State specific transitions	*/
     {EVENT_APPCAN_RX,       TaskAppCAN_ReceiveEvent,	   	TASK_APPCAN_RUNNING,			TASK_APPCAN_RUNNING		},
     {EVENT_APPCAN_TX,       TaskAppCAN_TransmitEvent,     	TASK_APPCAN_RUNNING,			TASK_APPCAN_RUNNING		},
+    {EVENT_APPCAN_PS,		TaskAppCAN_PSEvent, 			TASK_APPCAN_PS,					TASK_APPCAN_RUNNING		},
     {EVENT_APPCAN_NULL,     TaskAppCAN_IgnoreEvent,        	TASK_APPCAN_RUNNING,			TASK_APPCAN_RUNNING		}
 };
+
+static sStateMachineType const gasTaskAppCAN_PS[] =
+{
+    /* Event        Action routine      Next state */
+    /*  State specific transitions	*/
+    {EVENT_APPCAN_SLEEP,     	TaskAppCAN_SleepEvent,        	TASK_APPCAN_PS,				TASK_APPCAN_PS			},
+    {EVENT_APPCAN_NULL,     	TaskAppCAN_IgnoreEvent,        	TASK_APPCAN_PS,				TASK_APPCAN_PS			}
+};
+
+
+
 
 static sStateMachineType const * const gpasTaskAppCAN_StateMachine[] =
 {
 	gasTaskAppCAN_Initializing,
-	gasTaskAppCAN_Running
+	gasTaskAppCAN_Running,
+	gasTaskAppCAN_PS
 };
 
 /*static uint8_t u8TogglePin = 0;*/
@@ -251,14 +339,11 @@ void vTaskAppCAN(void const * argument)
 		if(++u16TimeToSleep >= 3000)
 		{
 			u16TimeToSleep = 0;
-			HAL_SuspendTick();
-			HAL_CAN_Stop(hCAN);
-			HAL_CAN_MspDeInit(hCAN);
-			HAL_CAN_MspInit(hCAN);
-		    HAL_NVIC_EnableIRQ(USB_LP_CAN1_RX0_IRQn);
-			HAL_CAN_Start(hCAN);
-		    HAL_CAN_ActivateNotification(hCAN, CAN_IT_RX_FIFO0_MSG_PENDING);
-		    HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLEEPENTRY_WFI);
+			stAppCANMsg.ucSrc = SRC_APPCAN;
+			stAppCANMsg.ucDest = SRC_APPCAN;
+			stAppCANMsg.ucEvent = EVENT_APPCAN_PS;
+			stAppCANMsg.pcMessageData = NULL;
+			xQueueGenericSend(xQueueAppCAN, ( void * )&stAppCANMsg, 0,0);
 		}
 	}
 

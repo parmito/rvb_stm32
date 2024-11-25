@@ -7,4 +7,5 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:rvb\ Debug/activeLaunchMode=deb
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:rvb\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:rvb/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:rvb/activeLaunchTarget=null\:---
+org.eclipse.launchbar.core.descriptorType.default\:rvb\ Debug/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:rvb\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

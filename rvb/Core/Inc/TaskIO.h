@@ -19,5 +19,6 @@ unsigned char TaskIO_Start(sMessageType *psMessage);
 unsigned char TaskIO_IgnoreEvent(sMessageType *psMessage);
 void vLocalTimerCallbackIo(void const * argument);
 void vTaskIO(void const * argument);
+QueueHandle_t *TaskIO_getQueue(void);
 
 #endif /* INC_TASKIO_H_ */
