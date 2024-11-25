@@ -26,26 +26,26 @@
 #define FIFO_SIZE 8
 
 /* Events*/
-#define	EVENT_IO_LED_NULL			(unsigned char)0
-#define EVENT_IO_LED_INIT 	        (unsigned char)1
-#define EVENT_IO_LED_ON	 	        (unsigned char)2
-#define	EVENT_IO_LED_FLASHING		(unsigned char)3
-#define	EVENT_IO_LED_OFF			(unsigned char)4
-#define EVENT_IO_PS 				(unsigned char)5
-#define EVENT_IO_WAKEUP				(unsigned char)6
+#define EVENT_IO_LED_INIT 	        (unsigned char)0
+#define EVENT_IO_LED_ON	 	        (unsigned char)1
+#define	EVENT_IO_LED_FLASHING		(unsigned char)2
+#define	EVENT_IO_LED_OFF			(unsigned char)3
+#define EVENT_IO_PS 				(unsigned char)4
+#define EVENT_IO_WAKEUP				(unsigned char)5
+#define	EVENT_IO_LED_NULL			(unsigned char)6
 
-#define	EVENT_APPCAN_NULL			(unsigned char)0
-#define EVENT_APPCAN_INIT 	        (unsigned char)1
-#define EVENT_APPCAN_RX				(unsigned char)2
-#define EVENT_APPCAN_TX 			(unsigned char)3
-#define EVENT_APPCAN_PS 			(unsigned char)4
-#define EVENT_APPCAN_SLEEP 			(unsigned char)5
+#define EVENT_APPCAN_INIT 	        (unsigned char)0
+#define EVENT_APPCAN_RX				(unsigned char)1
+#define EVENT_APPCAN_TX 			(unsigned char)2
+#define EVENT_APPCAN_PS 			(unsigned char)3
+#define EVENT_APPCAN_SLEEP 			(unsigned char)4
+#define	EVENT_APPCAN_NULL			(unsigned char)5
 
-#define	EVENT_APPSERIAL_NULL		(unsigned char)0
-#define EVENT_APPSERIAL_INIT 	    (unsigned char)1
-#define EVENT_APPSERIAL_RX			(unsigned char)2
-#define EVENT_APPSERIAL_TX 			(unsigned char)3
-#define EVENT_APPSERIAL_PS 			(unsigned char)4
+#define EVENT_APPSERIAL_INIT 	    (unsigned char)0
+#define EVENT_APPSERIAL_RX			(unsigned char)1
+#define EVENT_APPSERIAL_TX 			(unsigned char)2
+#define EVENT_APPSERIAL_PS 			(unsigned char)3
+#define	EVENT_APPSERIAL_NULL		(unsigned char)4
 
 /* States*/
 #define TASKIO_IO_INITIALIZING    	(unsigned char)0
@@ -55,7 +55,8 @@
 #define TASK_APPCAN_INITIALIZING 	(unsigned char)0
 #define TASK_APPCAN_RUNNING		 	(unsigned char)1
 #define TASK_APPCAN_PS    			(unsigned char)2
-#define TASK_APPCAN_SLEEPING    	(unsigned char)3
+#define TASK_APPCAN_RS    			(unsigned char)3
+#define TASK_APPCAN_SLEEPING    	(unsigned char)4
 
 #define TASK_APPSERIAL_INITIALIZING 	(unsigned char)0
 #define TASK_APPSERIAL_RUNNING		 	(unsigned char)1

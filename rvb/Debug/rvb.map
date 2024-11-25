@@ -265,7 +265,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x369 ./Core/Src/TaskAppSerial.o
  .debug_macro   0x00000000       0x16 ./Core/Src/TaskAppSerial.o
  .debug_macro   0x00000000       0x29 ./Core/Src/TaskAppSerial.o
- .debug_macro   0x00000000      0x136 ./Core/Src/TaskAppSerial.o
+ .debug_macro   0x00000000      0x130 ./Core/Src/TaskAppSerial.o
  .debug_macro   0x00000000       0xb5 ./Core/Src/TaskAppSerial.o
  .debug_macro   0x00000000       0xaa ./Core/Src/TaskAppSerial.o
  .debug_macro   0x00000000       0x87 ./Core/Src/TaskAppSerial.o
@@ -411,7 +411,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x369 ./Core/Src/TaskIO.o
  .debug_macro   0x00000000       0x16 ./Core/Src/TaskIO.o
  .debug_macro   0x00000000       0x29 ./Core/Src/TaskIO.o
- .debug_macro   0x00000000      0x136 ./Core/Src/TaskIO.o
+ .debug_macro   0x00000000      0x130 ./Core/Src/TaskIO.o
  .debug_macro   0x00000000       0xb5 ./Core/Src/TaskIO.o
  .debug_macro   0x00000000       0xaa ./Core/Src/TaskIO.o
  .debug_macro   0x00000000       0x87 ./Core/Src/TaskIO.o
@@ -664,7 +664,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x369 ./Core/Src/freertos.o
  .debug_macro   0x00000000       0x16 ./Core/Src/freertos.o
  .debug_macro   0x00000000       0x29 ./Core/Src/freertos.o
- .debug_macro   0x00000000      0x136 ./Core/Src/freertos.o
+ .debug_macro   0x00000000      0x130 ./Core/Src/freertos.o
  .debug_macro   0x00000000       0x16 ./Core/Src/freertos.o
  .debug_macro   0x00000000       0x20 ./Core/Src/freertos.o
  .debug_macro   0x00000000       0x1c ./Core/Src/freertos.o
@@ -927,7 +927,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x369 ./Core/Src/state.o
  .debug_macro   0x00000000       0x16 ./Core/Src/state.o
  .debug_macro   0x00000000       0x29 ./Core/Src/state.o
- .debug_macro   0x00000000      0x136 ./Core/Src/state.o
+ .debug_macro   0x00000000      0x130 ./Core/Src/state.o
  .group         0x00000000        0xc ./Core/Src/stm32f1xx_hal_msp.o
  .group         0x00000000        0xc ./Core/Src/stm32f1xx_hal_msp.o
  .group         0x00000000        0xc ./Core/Src/stm32f1xx_hal_msp.o
@@ -5745,7 +5745,7 @@ LOAD /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .debug_rnglists
                 0x00000be2       0xa0 ./Middlewares/FreeRTOS/timers.o
 
-.debug_macro    0x00000000    0x1a7a1
+.debug_macro    0x00000000    0x1a79b
  .debug_macro   0x00000000      0x3ea ./Core/Src/TaskAppCAN.o
  .debug_macro   0x000003ea      0xaa8 ./Core/Src/TaskAppCAN.o
  .debug_macro   0x00000e92      0x189 ./Core/Src/TaskAppCAN.o
@@ -5779,86 +5779,86 @@ LOAD /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .debug_macro   0x0000214b      0x369 ./Core/Src/TaskAppCAN.o
  .debug_macro   0x000024b4       0x16 ./Core/Src/TaskAppCAN.o
  .debug_macro   0x000024ca       0x29 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x000024f3      0x136 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00002629       0xb5 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x000026de       0xaa ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00002788       0x87 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x0000280f      0x21b ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00002a2a       0x2e ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00002a58       0x22 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00002a7a       0x1c ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00002a96       0x22 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00002ab8       0xbd ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00002b75      0xd23 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00003898     0xde75 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x0001170d       0x6d ./Core/Src/TaskAppCAN.o
- .debug_macro   0x0001177a     0x34a2 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00014c1c       0x56 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00014c72      0x5bc ./Core/Src/TaskAppCAN.o
- .debug_macro   0x0001522e      0x1b7 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x000153e5      0x1cb ./Core/Src/TaskAppCAN.o
- .debug_macro   0x000155b0      0x114 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x000156c4      0x1b2 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00015876       0x27 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x0001589d      0x12f ./Core/Src/TaskAppCAN.o
- .debug_macro   0x000159cc      0x1bc ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00015b88       0x34 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00015bbc       0x3c ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00015bf8      0x40f ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00016007       0x57 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x0001605e       0x87 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x000160e5      0x183 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00016268      0x140 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x000163a8      0x28e ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00016636       0x69 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x0001669f       0x97 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00016736       0x7e ./Core/Src/TaskAppCAN.o
- .debug_macro   0x000167b4       0x19 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x000167cd       0xf2 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x000168bf       0x16 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x000168d5       0x20 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x000168f5       0x1c ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00016911       0x10 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00016921       0x1c ./Core/Src/TaskAppCAN.o
- .debug_macro   0x0001693d       0x16 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00016953      0x146 ./Core/Src/TaskAppCAN.o
- .debug_macro   0x00016a99      0x3d2 ./Core/Src/TaskAppSerial.o
- .debug_macro   0x00016e6b      0x364 ./Core/Src/TaskIO.o
- .debug_macro   0x000171cf      0x1aa ./Core/Src/can.o
- .debug_macro   0x00017379       0x5c ./Core/Src/can.o
- .debug_macro   0x000173d5      0x408 ./Core/Src/freertos.o
- .debug_macro   0x000177dd       0x91 ./Core/Src/freertos.o
- .debug_macro   0x0001786e       0x8d ./Core/Src/freertos.o
- .debug_macro   0x000178fb      0x1aa ./Core/Src/gpio.o
- .debug_macro   0x00017aa5      0x312 ./Core/Src/main.o
- .debug_macro   0x00017db7       0xf0 ./Core/Src/main.o
- .debug_macro   0x00017ea7      0x14d ./Core/Src/state.o
- .debug_macro   0x00017ff4      0x11c ./Core/Src/state.o
- .debug_macro   0x00018110       0x94 ./Core/Src/state.o
- .debug_macro   0x000181a4      0x1a0 ./Core/Src/stm32f1xx_hal_msp.o
- .debug_macro   0x00018344      0x2bd ./Core/Src/stm32f1xx_it.o
- .debug_macro   0x00018601       0xff ./Core/Src/sysmem.o
- .debug_macro   0x00018700      0x23c ./Core/Src/sysmem.o
- .debug_macro   0x0001893c      0x196 ./Core/Src/system_stm32f1xx.o
- .debug_macro   0x00018ad2      0x1aa ./Core/Src/usart.o
- .debug_macro   0x00018c7c      0x1ba ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal.o
- .debug_macro   0x00018e36      0x1a5 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_can.o
- .debug_macro   0x00018fdb      0x196 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_cortex.o
- .debug_macro   0x00019171      0x201 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_gpio.o
- .debug_macro   0x00019372      0x1f6 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_pwr.o
- .debug_macro   0x00019568      0x1a8 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_rcc.o
- .debug_macro   0x00019710      0x197 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_uart.o
- .debug_macro   0x000198a7      0x210 ./Middlewares/FreeRTOS/cmsis_os.o
- .debug_macro   0x00019ab7       0x10 ./Middlewares/FreeRTOS/cmsis_os.o
- .debug_macro   0x00019ac7       0x16 ./Middlewares/FreeRTOS/cmsis_os.o
- .debug_macro   0x00019add       0xab ./Middlewares/FreeRTOS/cmsis_os.o
- .debug_macro   0x00019b88      0x1c0 ./Middlewares/FreeRTOS/heap_4.o
- .debug_macro   0x00019d48      0x199 ./Middlewares/FreeRTOS/list.o
- .debug_macro   0x00019ee1      0x20f ./Middlewares/FreeRTOS/port.o
- .debug_macro   0x0001a0f0      0x228 ./Middlewares/FreeRTOS/queue.o
- .debug_macro   0x0001a318      0x28b ./Middlewares/FreeRTOS/tasks.o
- .debug_macro   0x0001a5a3       0x10 ./Middlewares/FreeRTOS/tasks.o
- .debug_macro   0x0001a5b3      0x1ee ./Middlewares/FreeRTOS/timers.o
+ .debug_macro   0x000024f3      0x130 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00002623       0xb5 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x000026d8       0xaa ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00002782       0x87 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00002809      0x21b ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00002a24       0x2e ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00002a52       0x22 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00002a74       0x1c ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00002a90       0x22 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00002ab2       0xbd ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00002b6f      0xd23 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00003892     0xde75 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00011707       0x6d ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00011774     0x34a2 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00014c16       0x56 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00014c6c      0x5bc ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00015228      0x1b7 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x000153df      0x1cb ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x000155aa      0x114 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x000156be      0x1b2 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00015870       0x27 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00015897      0x12f ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x000159c6      0x1bc ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00015b82       0x34 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00015bb6       0x3c ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00015bf2      0x40f ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00016001       0x57 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00016058       0x87 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x000160df      0x183 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00016262      0x140 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x000163a2      0x28e ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00016630       0x69 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00016699       0x97 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00016730       0x7e ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x000167ae       0x19 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x000167c7       0xf2 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x000168b9       0x16 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x000168cf       0x20 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x000168ef       0x1c ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x0001690b       0x10 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x0001691b       0x1c ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00016937       0x16 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x0001694d      0x146 ./Core/Src/TaskAppCAN.o
+ .debug_macro   0x00016a93      0x3d2 ./Core/Src/TaskAppSerial.o
+ .debug_macro   0x00016e65      0x364 ./Core/Src/TaskIO.o
+ .debug_macro   0x000171c9      0x1aa ./Core/Src/can.o
+ .debug_macro   0x00017373       0x5c ./Core/Src/can.o
+ .debug_macro   0x000173cf      0x408 ./Core/Src/freertos.o
+ .debug_macro   0x000177d7       0x91 ./Core/Src/freertos.o
+ .debug_macro   0x00017868       0x8d ./Core/Src/freertos.o
+ .debug_macro   0x000178f5      0x1aa ./Core/Src/gpio.o
+ .debug_macro   0x00017a9f      0x312 ./Core/Src/main.o
+ .debug_macro   0x00017db1       0xf0 ./Core/Src/main.o
+ .debug_macro   0x00017ea1      0x14d ./Core/Src/state.o
+ .debug_macro   0x00017fee      0x11c ./Core/Src/state.o
+ .debug_macro   0x0001810a       0x94 ./Core/Src/state.o
+ .debug_macro   0x0001819e      0x1a0 ./Core/Src/stm32f1xx_hal_msp.o
+ .debug_macro   0x0001833e      0x2bd ./Core/Src/stm32f1xx_it.o
+ .debug_macro   0x000185fb       0xff ./Core/Src/sysmem.o
+ .debug_macro   0x000186fa      0x23c ./Core/Src/sysmem.o
+ .debug_macro   0x00018936      0x196 ./Core/Src/system_stm32f1xx.o
+ .debug_macro   0x00018acc      0x1aa ./Core/Src/usart.o
+ .debug_macro   0x00018c76      0x1ba ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal.o
+ .debug_macro   0x00018e30      0x1a5 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_can.o
+ .debug_macro   0x00018fd5      0x196 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_cortex.o
+ .debug_macro   0x0001916b      0x201 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_gpio.o
+ .debug_macro   0x0001936c      0x1f6 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_pwr.o
+ .debug_macro   0x00019562      0x1a8 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_rcc.o
+ .debug_macro   0x0001970a      0x197 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_uart.o
+ .debug_macro   0x000198a1      0x210 ./Middlewares/FreeRTOS/cmsis_os.o
+ .debug_macro   0x00019ab1       0x10 ./Middlewares/FreeRTOS/cmsis_os.o
+ .debug_macro   0x00019ac1       0x16 ./Middlewares/FreeRTOS/cmsis_os.o
+ .debug_macro   0x00019ad7       0xab ./Middlewares/FreeRTOS/cmsis_os.o
+ .debug_macro   0x00019b82      0x1c0 ./Middlewares/FreeRTOS/heap_4.o
+ .debug_macro   0x00019d42      0x199 ./Middlewares/FreeRTOS/list.o
+ .debug_macro   0x00019edb      0x20f ./Middlewares/FreeRTOS/port.o
+ .debug_macro   0x0001a0ea      0x228 ./Middlewares/FreeRTOS/queue.o
+ .debug_macro   0x0001a312      0x28b ./Middlewares/FreeRTOS/tasks.o
+ .debug_macro   0x0001a59d       0x10 ./Middlewares/FreeRTOS/tasks.o
+ .debug_macro   0x0001a5ad      0x1ee ./Middlewares/FreeRTOS/timers.o
 
 .debug_line     0x00000000    0x155c2
  .debug_line    0x00000000      0xd7f ./Core/Src/TaskAppCAN.o
@@ -5890,62 +5890,62 @@ LOAD /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.ide.mcu.externaltools.
  .debug_line    0x00012e6c     0x1a0b ./Middlewares/FreeRTOS/tasks.o
  .debug_line    0x00014877      0xd4b ./Middlewares/FreeRTOS/timers.o
 
-.debug_str      0x00000000    0x8d6f8
- .debug_str     0x00000000    0x86d2a ./Core/Src/TaskAppCAN.o
-                              0x872b4 (size before relaxing)
- .debug_str     0x00086d2a      0x54d ./Core/Src/TaskAppSerial.o
-                              0x86e0d (size before relaxing)
- .debug_str     0x00087277      0x2ef ./Core/Src/TaskIO.o
-                              0x86439 (size before relaxing)
- .debug_str     0x00087566      0x1ce ./Core/Src/can.o
+.debug_str      0x00000000    0x8d6d8
+ .debug_str     0x00000000    0x86d0a ./Core/Src/TaskAppCAN.o
+                              0x87294 (size before relaxing)
+ .debug_str     0x00086d0a      0x54d ./Core/Src/TaskAppSerial.o
+                              0x86ded (size before relaxing)
+ .debug_str     0x00087257      0x2ef ./Core/Src/TaskIO.o
+                              0x86419 (size before relaxing)
+ .debug_str     0x00087546      0x1ce ./Core/Src/can.o
                               0x7d0aa (size before relaxing)
- .debug_str     0x00087734      0x8da ./Core/Src/freertos.o
-                              0x87234 (size before relaxing)
- .debug_str     0x0008800e       0x20 ./Core/Src/gpio.o
+ .debug_str     0x00087714      0x8da ./Core/Src/freertos.o
+                              0x87214 (size before relaxing)
+ .debug_str     0x00087fee       0x20 ./Core/Src/gpio.o
                               0x7c8a2 (size before relaxing)
- .debug_str     0x0008802e      0x1bb ./Core/Src/main.o
+ .debug_str     0x0008800e      0x1bb ./Core/Src/main.o
                               0x845ca (size before relaxing)
- .debug_str     0x000881e9       0x49 ./Core/Src/state.o
-                               0x799e (size before relaxing)
- .debug_str     0x00088232       0x2c ./Core/Src/stm32f1xx_hal_msp.o
+ .debug_str     0x000881c9       0x49 ./Core/Src/state.o
+                               0x797e (size before relaxing)
+ .debug_str     0x00088212       0x2c ./Core/Src/stm32f1xx_hal_msp.o
                               0x7cae4 (size before relaxing)
- .debug_str     0x0008825e       0xec ./Core/Src/stm32f1xx_it.o
+ .debug_str     0x0008823e       0xec ./Core/Src/stm32f1xx_it.o
                               0x82616 (size before relaxing)
- .debug_str     0x0008834a      0x35c ./Core/Src/sysmem.o
+ .debug_str     0x0008832a      0x35c ./Core/Src/sysmem.o
                                0x6072 (size before relaxing)
- .debug_str     0x000886a6       0x7e ./Core/Src/system_stm32f1xx.o
+ .debug_str     0x00088686       0x7e ./Core/Src/system_stm32f1xx.o
                               0x7c855 (size before relaxing)
- .debug_str     0x00088724       0x58 ./Core/Src/usart.o
+ .debug_str     0x00088704       0x58 ./Core/Src/usart.o
                               0x7ccfd (size before relaxing)
- .debug_str     0x0008877c       0x44 ./Core/Startup/startup_stm32f103c6tx.o
+ .debug_str     0x0008875c       0x44 ./Core/Startup/startup_stm32f103c6tx.o
                                  0x7d (size before relaxing)
- .debug_str     0x000887c0      0x3aa ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal.o
+ .debug_str     0x000887a0      0x3aa ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal.o
                               0x7cf89 (size before relaxing)
- .debug_str     0x00088b6a      0x64e ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_can.o
+ .debug_str     0x00088b4a      0x64e ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_can.o
                               0x7d418 (size before relaxing)
- .debug_str     0x000891b8      0x29e ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_cortex.o
+ .debug_str     0x00089198      0x29e ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_cortex.o
                               0x7ced5 (size before relaxing)
- .debug_str     0x00089456      0x321 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_gpio.o
+ .debug_str     0x00089436      0x321 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_gpio.o
                               0x7cc16 (size before relaxing)
- .debug_str     0x00089777      0x524 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_pwr.o
+ .debug_str     0x00089757      0x524 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_pwr.o
                               0x7cdc7 (size before relaxing)
- .debug_str     0x00089c9b      0x258 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_rcc.o
+ .debug_str     0x00089c7b      0x258 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_rcc.o
                               0x7ccbf (size before relaxing)
- .debug_str     0x00089ef3      0x691 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_uart.o
+ .debug_str     0x00089ed3      0x691 ./Drivers/STM32F1xx_HAL_Driver/stm32f1xx_hal_uart.o
                               0x7d330 (size before relaxing)
- .debug_str     0x0008a584      0x8cd ./Middlewares/FreeRTOS/cmsis_os.o
+ .debug_str     0x0008a564      0x8cd ./Middlewares/FreeRTOS/cmsis_os.o
                                0xe9a4 (size before relaxing)
- .debug_str     0x0008ae51      0x3ce ./Middlewares/FreeRTOS/heap_4.o
+ .debug_str     0x0008ae31      0x3ce ./Middlewares/FreeRTOS/heap_4.o
                                0xb476 (size before relaxing)
- .debug_str     0x0008b21f      0x15d ./Middlewares/FreeRTOS/list.o
+ .debug_str     0x0008b1ff      0x15d ./Middlewares/FreeRTOS/list.o
                                0xab34 (size before relaxing)
- .debug_str     0x0008b37c      0x744 ./Middlewares/FreeRTOS/port.o
+ .debug_str     0x0008b35c      0x744 ./Middlewares/FreeRTOS/port.o
                                0xa1d7 (size before relaxing)
- .debug_str     0x0008bac0      0x7f8 ./Middlewares/FreeRTOS/queue.o
+ .debug_str     0x0008baa0      0x7f8 ./Middlewares/FreeRTOS/queue.o
                                0xc518 (size before relaxing)
- .debug_str     0x0008c2b8      0xf35 ./Middlewares/FreeRTOS/tasks.o
+ .debug_str     0x0008c298      0xf35 ./Middlewares/FreeRTOS/tasks.o
                                0xd236 (size before relaxing)
- .debug_str     0x0008d1ed      0x50b ./Middlewares/FreeRTOS/timers.o
+ .debug_str     0x0008d1cd      0x50b ./Middlewares/FreeRTOS/timers.o
                                0xcdad (size before relaxing)
 
 .comment        0x00000000       0x43

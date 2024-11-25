@@ -35,17 +35,17 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  15 .debug_rnglists 00000c82  00000000  00000000  00020cc0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  0001a7a1  00000000  00000000  00021942  2**0
+ 16 .debug_macro  0001a79b  00000000  00000000  00021942  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   000155c2  00000000  00000000  0003c0e3  2**0
+ 17 .debug_line   000155c2  00000000  00000000  0003c0dd  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0008d6f8  00000000  00000000  000516a5  2**0
+ 18 .debug_str    0008d6d8  00000000  00000000  0005169f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  000ded9d  2**0
+ 19 .comment      00000043  00000000  00000000  000ded77  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00004678  00000000  00000000  000dede0  2**2
+ 20 .debug_frame  00004678  00000000  00000000  000dedbc  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000061  00000000  00000000  000e3458  2**0
+ 21 .debug_line_str 00000061  00000000  00000000  000e3434  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -114,7 +114,7 @@ extern void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
  800017c:	705a      	strb	r2, [r3, #1]
     stAppCANMsg.ucEvent = EVENT_IO_WAKEUP;
  800017e:	4b09      	ldr	r3, [pc, #36]	@ (80001a4 <HAL_CAN_RxFifo0MsgPendingCallback+0x44>)
- 8000180:	2205      	movs	r2, #5
+ 8000180:	2206      	movs	r2, #6
  8000182:	709a      	strb	r2, [r3, #2]
     stAppCANMsg.pcMessageData = NULL;
  8000184:	4b07      	ldr	r3, [pc, #28]	@ (80001a4 <HAL_CAN_RxFifo0MsgPendingCallback+0x44>)
@@ -194,7 +194,7 @@ void TaskAppCAN_Entry(QueueHandle_t xQueue,TimerHandle_t xTimer)
  80001ea:	705a      	strb	r2, [r3, #1]
     stAppCANMsg.ucEvent = EVENT_APPCAN_INIT;
  80001ec:	4b09      	ldr	r3, [pc, #36]	@ (8000214 <TaskAppCAN_Entry+0x54>)
- 80001ee:	2200      	movs	r2, #0
+ 80001ee:	2201      	movs	r2, #1
  80001f0:	709a      	strb	r2, [r3, #2]
     xQueueGenericSend(xQueueAppCAN, ( void * )&stAppCANMsg, 0,0);
  80001f2:	4b05      	ldr	r3, [pc, #20]	@ (8000208 <TaskAppCAN_Entry+0x48>)
@@ -354,7 +354,7 @@ unsigned char TaskAppCAN_ReceiveEvent(sMessageType *psMessage)
  80002e8:	705a      	strb	r2, [r3, #1]
     stAppCANMsg.ucEvent = EVENT_APPSERIAL_TX;
  80002ea:	4b0d      	ldr	r3, [pc, #52]	@ (8000320 <TaskAppCAN_ReceiveEvent+0xc0>)
- 80002ec:	2202      	movs	r2, #2
+ 80002ec:	2203      	movs	r2, #3
  80002ee:	709a      	strb	r2, [r3, #2]
     stAppCANMsg.pcMessageData = (char*)&u8SerialTxBuffer[0];
  80002f0:	4b0b      	ldr	r3, [pc, #44]	@ (8000320 <TaskAppCAN_ReceiveEvent+0xc0>)
@@ -436,7 +436,7 @@ unsigned char TaskAppCAN_PSEvent(sMessageType *psMessage)
  8000356:	705a      	strb	r2, [r3, #1]
     stAppCANMsg.ucEvent = EVENT_IO_PS;
  8000358:	4b09      	ldr	r3, [pc, #36]	@ (8000380 <TaskAppCAN_PSEvent+0x40>)
- 800035a:	2204      	movs	r2, #4
+ 800035a:	2205      	movs	r2, #5
  800035c:	709a      	strb	r2, [r3, #2]
     stAppCANMsg.pcMessageData = NULL;
  800035e:	4b08      	ldr	r3, [pc, #32]	@ (8000380 <TaskAppCAN_PSEvent+0x40>)
@@ -656,7 +656,7 @@ void vTaskAppCAN(void const * argument)
  80004a8:	705a      	strb	r2, [r3, #1]
 			stAppCANMsg.ucEvent = EVENT_APPCAN_RX;
  80004aa:	4b32      	ldr	r3, [pc, #200]	@ (8000574 <vTaskAppCAN+0x174>)
- 80004ac:	2201      	movs	r2, #1
+ 80004ac:	2202      	movs	r2, #2
  80004ae:	709a      	strb	r2, [r3, #2]
 			stAppCANMsg.pcMessageData = (char*)&stFrameRxCAN[u8FifoRxCAN];
  80004b0:	4b2e      	ldr	r3, [pc, #184]	@ (800056c <vTaskAppCAN+0x16c>)
@@ -722,7 +722,7 @@ void vTaskAppCAN(void const * argument)
  8000510:	705a      	strb	r2, [r3, #1]
 			stAppCANMsg.ucEvent = EVENT_APPCAN_PS;
  8000512:	4b18      	ldr	r3, [pc, #96]	@ (8000574 <vTaskAppCAN+0x174>)
- 8000514:	2203      	movs	r2, #3
+ 8000514:	2204      	movs	r2, #4
  8000516:	709a      	strb	r2, [r3, #2]
 			stAppCANMsg.pcMessageData = NULL;
  8000518:	4b16      	ldr	r3, [pc, #88]	@ (8000574 <vTaskAppCAN+0x174>)
@@ -832,7 +832,7 @@ void TaskAppSerial_Entry(QueueHandle_t xQueue,TimerHandle_t xTimer)
  80005c2:	705a      	strb	r2, [r3, #1]
     stAppSerialMsg.ucEvent = EVENT_APPSERIAL_INIT;
  80005c4:	4b09      	ldr	r3, [pc, #36]	@ (80005ec <TaskAppSerial_Entry+0x54>)
- 80005c6:	2200      	movs	r2, #0
+ 80005c6:	2201      	movs	r2, #1
  80005c8:	709a      	strb	r2, [r3, #2]
     xQueueGenericSend(xQueueAppSerial, ( void * )&stAppSerialMsg, 0,0);
  80005ca:	4b05      	ldr	r3, [pc, #20]	@ (80005e0 <TaskAppSerial_Entry+0x48>)
@@ -1092,7 +1092,7 @@ void TaskIO_Entry(QueueHandle_t *xQueue,TimerHandle_t xTimer)
  8000740:	705a      	strb	r2, [r3, #1]
     stIOMsg.ucEvent = EVENT_IO_LED_INIT;
  8000742:	4b09      	ldr	r3, [pc, #36]	@ (8000768 <TaskIO_Entry+0x48>)
- 8000744:	2200      	movs	r2, #0
+ 8000744:	2201      	movs	r2, #1
  8000746:	709a      	strb	r2, [r3, #2]
     xQueueGenericSend(xQueueIO, ( void * )&stIOMsg, 0,0);
  8000748:	4b05      	ldr	r3, [pc, #20]	@ (8000760 <TaskIO_Entry+0x40>)
@@ -1143,7 +1143,7 @@ unsigned char TaskIO_Start(sMessageType *psMessage)
  800078e:	705a      	strb	r2, [r3, #1]
     stIOMsg.ucEvent = EVENT_IO_LED_NULL;
  8000790:	4b17      	ldr	r3, [pc, #92]	@ (80007f0 <TaskIO_Start+0x84>)
- 8000792:	2206      	movs	r2, #6
+ 8000792:	2200      	movs	r2, #0
  8000794:	709a      	strb	r2, [r3, #2]
     xQueueGenericSend(xQueueIO, ( void * )&stIOMsg, 0,0);
  8000796:	4b17      	ldr	r3, [pc, #92]	@ (80007f4 <TaskIO_Start+0x88>)
@@ -1269,7 +1269,7 @@ unsigned char TaskIO_PSEvent(sMessageType *psMessage)
  800085c:	705a      	strb	r2, [r3, #1]
 	stIOMsg.ucEvent = EVENT_APPCAN_SLEEP;
  800085e:	4b0b      	ldr	r3, [pc, #44]	@ (800088c <TaskIO_PSEvent+0x5c>)
- 8000860:	2204      	movs	r2, #4
+ 8000860:	2205      	movs	r2, #5
  8000862:	709a      	strb	r2, [r3, #2]
 	stIOMsg.pcMessageData = NULL;
  8000864:	4b09      	ldr	r3, [pc, #36]	@ (800088c <TaskIO_PSEvent+0x5c>)

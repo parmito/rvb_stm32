@@ -294,6 +294,8 @@ static sStateMachineType const gasTaskAppCAN_PS[] =
 };
 
 
+
+
 static sStateMachineType const * const gpasTaskAppCAN_StateMachine[] =
 {
 	gasTaskAppCAN_Initializing,
