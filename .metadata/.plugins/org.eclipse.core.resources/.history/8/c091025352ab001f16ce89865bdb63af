@@ -43,11 +43,20 @@ static uint16_t u16TimeToSleep = 0;
 
 extern void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 {
-	HAL_NVIC_ClearPendingIRQ(USB_LP_CAN1_RX0_IRQn);
 
 	HAL_CAN_Stop(hCAN);
+	HAL_CAN_MspDeInit(hCAN);
+	HAL_CAN_MspInit(hCAN);
 	HAL_NVIC_DisableIRQ(USB_LP_CAN1_RX0_IRQn);
+	HAL_CAN_Start(hCAN);
 	HAL_CAN_DeactivateNotification(hCAN, CAN_IT_RX_FIFO0_MSG_PENDING);
+	HAL_ResumeTick();
+
+    stAppCANMsg.ucSrc = SRC_APPCAN;
+    stAppCANMsg.ucDest = SRC_IO;
+    stAppCANMsg.ucEvent = EVENT_IO_WAKEUP;
+    stAppCANMsg.pcMessageData = NULL;
+    xQueueGenericSendFromISR(*pstQueueIO, &stAppCANMsg, 0,0);
 
     stAppCANMsg.ucSrc = SRC_APPCAN;
     stAppCANMsg.ucDest = SRC_APPCAN;
@@ -55,7 +64,6 @@ extern void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
     stAppCANMsg.pcMessageData = NULL;
     xQueueGenericSendFromISR(xQueueAppCAN, &stAppCANMsg, 0,0);
 
-	HAL_ResumeTick();
 }
 
 //////////////////////////////////////////////
@@ -249,20 +257,6 @@ unsigned char TaskAppCAN_SleepEvent(sMessageType *psMessage)
 unsigned char TaskAppCAN_WakeUp(sMessageType *psMessage)
 {
     unsigned char boError = true;
-
-/*	HAL_CAN_Stop(hCAN);
-	HAL_CAN_MspDeInit(hCAN);
-	HAL_CAN_MspInit(hCAN);
-	HAL_NVIC_DisableIRQ(USB_LP_CAN1_RX0_IRQn);
-	HAL_CAN_DeactivateNotification(hCAN, CAN_IT_RX_FIFO0_MSG_PENDING);*/
-	HAL_CAN_Start(hCAN);
-
-
-    stAppCANMsg.ucSrc = SRC_APPCAN;
-    stAppCANMsg.ucDest = SRC_IO;
-    stAppCANMsg.ucEvent = EVENT_IO_WAKEUP;
-    stAppCANMsg.pcMessageData = NULL;
-    xQueueGenericSend(*pstQueueIO, &stAppCANMsg, 0,0);
 
     stAppCANMsg.ucSrc = SRC_APPCAN;
     stAppCANMsg.ucDest = SRC_APPCAN;

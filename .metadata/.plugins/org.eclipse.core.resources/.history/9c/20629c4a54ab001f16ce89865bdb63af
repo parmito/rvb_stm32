@@ -40,14 +40,13 @@
 #define EVENT_APPCAN_TX 			(unsigned char)3
 #define EVENT_APPCAN_PS 			(unsigned char)4
 #define EVENT_APPCAN_SLEEP 			(unsigned char)5
-#define EVENT_APPCAN_WAKEUP			(unsigned char)6
 
 #define	EVENT_APPSERIAL_NULL		(unsigned char)0
 #define EVENT_APPSERIAL_INIT 	    (unsigned char)1
 #define EVENT_APPSERIAL_RX			(unsigned char)2
 #define EVENT_APPSERIAL_TX 			(unsigned char)3
 #define EVENT_APPSERIAL_PS 			(unsigned char)4
-
+#define EVENT_APPCAN_WAKEUP			(unsigned char)5
 
 
 /* States*/

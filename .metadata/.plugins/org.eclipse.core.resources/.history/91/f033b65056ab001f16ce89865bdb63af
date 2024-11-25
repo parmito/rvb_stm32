@@ -45,9 +45,9 @@ extern void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 {
 	HAL_NVIC_ClearPendingIRQ(USB_LP_CAN1_RX0_IRQn);
 
-	HAL_CAN_Stop(hCAN);
-	HAL_NVIC_DisableIRQ(USB_LP_CAN1_RX0_IRQn);
-	HAL_CAN_DeactivateNotification(hCAN, CAN_IT_RX_FIFO0_MSG_PENDING);
+//	HAL_CAN_Stop(hCAN);
+//	HAL_NVIC_DisableIRQ(USB_LP_CAN1_RX0_IRQn);
+//	HAL_CAN_DeactivateNotification(hCAN, CAN_IT_RX_FIFO0_MSG_PENDING);
 
     stAppCANMsg.ucSrc = SRC_APPCAN;
     stAppCANMsg.ucDest = SRC_APPCAN;
@@ -250,11 +250,11 @@ unsigned char TaskAppCAN_WakeUp(sMessageType *psMessage)
 {
     unsigned char boError = true;
 
-/*	HAL_CAN_Stop(hCAN);
+	HAL_CAN_Stop(hCAN);
 	HAL_CAN_MspDeInit(hCAN);
 	HAL_CAN_MspInit(hCAN);
 	HAL_NVIC_DisableIRQ(USB_LP_CAN1_RX0_IRQn);
-	HAL_CAN_DeactivateNotification(hCAN, CAN_IT_RX_FIFO0_MSG_PENDING);*/
+	HAL_CAN_DeactivateNotification(hCAN, CAN_IT_RX_FIFO0_MSG_PENDING);
 	HAL_CAN_Start(hCAN);
 
 
