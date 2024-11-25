@@ -247,6 +247,9 @@ unsigned char TaskAppCAN_WakeUp(sMessageType *psMessage)
 {
     unsigned char boError = true;
 
+//	HAL_CAN_Start(hCAN);
+
+
     stAppCANMsg.ucSrc = SRC_APPCAN;
     stAppCANMsg.ucDest = SRC_IO;
     stAppCANMsg.ucEvent = EVENT_IO_WAKEUP;
