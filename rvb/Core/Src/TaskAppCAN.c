@@ -210,7 +210,10 @@ unsigned char TaskAppCAN_PSEvent(sMessageType *psMessage)
 
 	return boError;
 }
-
+uint16_t VirtAddVarTab[NB_OF_VAR];
+uint16_t VarDataTab[NB_OF_VAR] = {'D', 'a', 'n', 'i', 'l', 'o'};
+uint8_t VarDataTabRead[NB_OF_VAR];
+uint16_t VarIndex,VarDataTmp = 0;
 //////////////////////////////////////////////
 //
 //
@@ -224,6 +227,65 @@ unsigned char TaskAppCAN_SleepEvent(sMessageType *psMessage)
 
 	HAL_SuspendTick();
 	/*Configure GPIO pin Output Level */
+
+	uint16_t VirtAddVarTab[NB_OF_VAR];
+	uint16_t VarDataTab[NB_OF_VAR] = {'C','a','r','l','o','s'};
+	uint8_t VarDataTabRead[NB_OF_VAR];
+	uint16_t VarIndex,VarDataTmp = 0;
+
+	HAL_FLASH_Unlock();
+
+	/* EEPROM Init */
+	if( EE_Init() != HAL_OK)
+	{
+		Error_Handler();
+	}
+
+	/*EE_Format();*/
+
+	for(VarIndex = 1; VarIndex <= NB_OF_VAR; VarIndex++)
+	{
+		VirtAddVarTab[VarIndex-1] = VarIndex;
+	}
+
+	// Fill EEPROM variables addresses
+
+	for(VarIndex = 1; VarIndex <= NB_OF_VAR; VarIndex++)
+	{
+		VirtAddVarTab[VarIndex-1] = VarIndex;
+	}
+	for (VarIndex = 0; VarIndex < NB_OF_VAR; VarIndex++)
+	{
+		if((EE_ReadVariable(VirtAddVarTab[VarIndex],  &VarDataTabRead[VarIndex])) != HAL_OK)
+		{
+			Error_Handler();
+		}
+	}
+
+
+	// Fill EEPROM variables addresses
+	for(VarIndex = 1; VarIndex <= NB_OF_VAR; VarIndex++)
+	{
+		VirtAddVarTab[VarIndex-1] = VarIndex;
+	}
+
+	for (VarIndex = 0; VarIndex < NB_OF_VAR; VarIndex++)
+	{
+		/* Sequence 1 */
+		if((EE_WriteVariable(VirtAddVarTab[VarIndex],  VarDataTab[VarIndex])) != HAL_OK)
+		{
+			Error_Handler();
+		}
+	}
+
+	for (VarIndex = 0; VarIndex < NB_OF_VAR; VarIndex++)
+	{
+		if((EE_ReadVariable(VirtAddVarTab[VarIndex],  &VarDataTabRead[VarIndex])) != HAL_OK)
+		{
+			Error_Handler();
+		}
+	}
+
 
 	HAL_CAN_Stop(hCAN);
 	HAL_CAN_MspDeInit(hCAN);

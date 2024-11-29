@@ -2,6 +2,7 @@
 "./Core/Src/TaskAppSerial.o"
 "./Core/Src/TaskIO.o"
 "./Core/Src/can.o"
+"./Core/Src/eeprom.o"
 "./Core/Src/freertos.o"
 "./Core/Src/gpio.o"
 "./Core/Src/main.o"

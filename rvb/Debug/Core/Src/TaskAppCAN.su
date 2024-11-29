@@ -5,8 +5,8 @@
 ../Core/Src/TaskAppCAN.c:119:15:TaskAppCAN_ReceiveEvent	32	static
 ../Core/Src/TaskAppCAN.c:161:15:TaskAppCAN_TransmitEvent	24	static
 ../Core/Src/TaskAppCAN.c:201:15:TaskAppCAN_PSEvent	24	static
-../Core/Src/TaskAppCAN.c:221:15:TaskAppCAN_SleepEvent	24	static
-../Core/Src/TaskAppCAN.c:246:15:TaskAppCAN_WakeUp	24	static
-../Core/Src/TaskAppCAN.c:274:15:TaskAppCAN_IgnoreEvent	24	static
-../Core/Src/TaskAppCAN.c:288:6:vTimerCallbackAppCAN	16	static
-../Core/Src/TaskAppCAN.c:336:6:vTaskAppCAN	16	static
+../Core/Src/TaskAppCAN.c:224:15:TaskAppCAN_SleepEvent	56	static
+../Core/Src/TaskAppCAN.c:308:15:TaskAppCAN_WakeUp	24	static
+../Core/Src/TaskAppCAN.c:333:15:TaskAppCAN_IgnoreEvent	24	static
+../Core/Src/TaskAppCAN.c:347:6:vTimerCallbackAppCAN	16	static
+../Core/Src/TaskAppCAN.c:395:6:vTaskAppCAN	16	static

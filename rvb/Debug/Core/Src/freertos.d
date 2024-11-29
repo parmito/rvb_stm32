@@ -43,8 +43,9 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
  /home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
  ../Core/Inc/defines.h ../Core/Inc/TaskIO.h ../Core/Inc/state.h \
  ../Core/Inc/defines.h ../Core/Inc/gpio.h ../Core/Inc/main.h \
- ../Core/Inc/TaskAppCAN.h ../Core/Inc/can.h ../Core/Inc/TaskAppSerial.h \
- ../Core/Inc/usart.h ../Core/Inc/TaskAppSerial.h
+ ../Core/Inc/TaskAppCAN.h ../Core/Inc/can.h ../Core/Inc/eeprom.h \
+ ../Core/Inc/TaskAppSerial.h ../Core/Inc/usart.h \
+ ../Core/Inc/TaskAppSerial.h
 /home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
 /home/volkswagen2/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
@@ -95,6 +96,7 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
 ../Core/Inc/main.h:
 ../Core/Inc/TaskAppCAN.h:
 ../Core/Inc/can.h:
+../Core/Inc/eeprom.h:
 ../Core/Inc/TaskAppSerial.h:
 ../Core/Inc/usart.h:
 ../Core/Inc/TaskAppSerial.h:

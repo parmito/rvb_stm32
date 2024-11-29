@@ -14,6 +14,7 @@
 #include "can.h"
 #include "cmsis_os.h"
 #include "defines.h"
+#include "eeprom.h"
 #include <string.h>
 
 #include "TaskAppSerial.h"
